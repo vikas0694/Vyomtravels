@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vyom Travels — Executive Car Rentals &amp; Bandhavgarh Tiger Safaris (Indore)</title>
-<meta name="description" content="Vyom Travels: Executive car rentals across Madhya Pradesh — Toyota Innova Crysta, Maruti Suzuki Ertiga, BMW 5 Series, Audi A6, Verna, Dzire, Aura, Swift — with confirmed Bandhavgarh National Park tiger safari permits.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230D9488'/%3E%3Cstop offset='1' stop-color='%23D4AF37'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='48' height='48' rx='12' fill='%230F172A'/%3E%3Cpath d='M12 14C17 10.4 31 10.4 36 14' stroke='url(%23g)' stroke-width='2.5' stroke-linecap='round' fill='none'/%3E%3Cpath d='M10 16L24 38' stroke='%23D4AF37' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Cpath d='M24 38C29.6 28.2 33.2 21 40 13.4' stroke='%230D9488' stroke-width='4.5' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='40.2' cy='13.4' r='2.8' fill='%23D4AF37'/%3E%3C/svg%3E">
+<title>Vyom Travels — Official Car Rentals &amp; Bandhavgarh Tiger Safaris (Indore, MP)</title>
+<meta name="description" content="Vyom Travels (Aakash Jaiswal): Certified outstation &amp; city car rentals across MP — Toyota Innova Crysta, Maruti Suzuki Ertiga, Maruti Dzire, Hyundai Verna, Hyundai Aura, Swift, BMW 5 Series, Audi A6 — with confirmed Bandhavgarh National Park tiger safari permits.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%230F172A'/%3E%3Cpath d='M12 18h24v12H12z' fill='%23059669'/%3E%3Ccircle cx='18' cy='32' r='4' fill='%23D4AF37'/%3E%3Ccircle cx='30' cy='32' r='4' fill='%23D4AF37'/%3E%3C/svg%3E">
 
 <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,28 +17,23 @@
     --bg-main: #F8FAFC;
     --bg-card: #FFFFFF;
     --bg-surface: #F1F5F9;
-    --bg-accent-light: #CCFBF1;
+    --bg-accent: #ECFDF5;
     
     --border-color: #E2E8F0;
-    --border-bright: #CBD5E1;
-    --border-emerald: rgba(13, 148, 136, 0.25);
+    --border-hover: #059669;
     
     --text-heading: #0F172A;
-    --text-main: #334155;
+    --text-body: #334155;
     --text-muted: #64748B;
-    --text-dim: #94A3B8;
     
-    --emerald-primary: #0D9488;
-    --emerald-hover: #0F766E;
-    --emerald-light: #14B8A6;
-    --emerald-glow: rgba(13, 148, 136, 0.15);
+    --primary: #059669;
+    --primary-dark: #047857;
+    --primary-light: #10B981;
+    --primary-glow: rgba(5, 150, 105, 0.12);
     
     --gold: #D4AF37;
     --gold-dark: #B45309;
-    --gold-light: #FEF3C7;
-    
-    --navy-dark: #0F172A;
-    --navy-card: #1E293B;
+    --gold-bg: #FEF3C7;
     
     --radius-sm: 8px;
     --radius-md: 14px;
@@ -55,15 +50,13 @@
 
   *, *::before, *::after {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0; padding: 0;
   }
 
   html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
     background-color: var(--bg-main);
-    color: var(--text-main);
+    color: var(--text-body);
     font-family: var(--font-body);
     font-size: 16px;
     line-height: 1.6;
@@ -72,69 +65,25 @@
 
   body {
     background-color: var(--bg-main);
-    color: var(--text-main);
+    color: var(--text-body);
     overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: 700;
-    letter-spacing: -0.025em;
     color: var(--text-heading);
-    line-height: 1.15;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
   }
 
-  a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-
-  button {
-    font-family: inherit;
-    border: none;
-    background: none;
-    cursor: pointer;
-  }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; border: none; background: none; cursor: pointer; }
 
   .wrap {
     max-width: 1240px;
     margin: 0 auto;
     padding: 0 24px;
-  }
-
-  /* ---------- Utility Classes ---------- */
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 16px;
-    border-radius: 999px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    background: var(--bg-accent-light);
-    border: 1px solid var(--border-emerald);
-    color: var(--emerald-primary);
-  }
-  .badge .dot-live {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--emerald-primary);
-    box-shadow: 0 0 10px var(--emerald-primary);
-    animation: pulseGlow 2s infinite;
-  }
-
-  @keyframes pulseGlow {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.4; transform: scale(0.85); }
   }
 
   /* ---------- Buttons ---------- */
@@ -149,47 +98,29 @@
     font-size: 15px;
     border-radius: var(--radius-md);
     cursor: pointer;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.25s ease;
     white-space: nowrap;
-    position: relative;
-    overflow: hidden;
   }
-  .btn-lg {
-    padding: 16px 32px;
-    font-size: 16px;
-    border-radius: var(--radius-lg);
-  }
-  .btn-sm {
-    padding: 9px 18px;
-    font-size: 14px;
-    border-radius: var(--radius-sm);
-  }
-
-  .btn-emerald {
-    background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);
+  .btn-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: #FFFFFF;
-    font-weight: 700;
-    box-shadow: 0 4px 18px rgba(13, 148, 136, 0.3);
+    box-shadow: 0 4px 18px rgba(5, 150, 105, 0.3);
   }
-  .btn-emerald:hover {
+  .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(13, 148, 136, 0.45);
-    background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%);
+    box-shadow: 0 8px 25px rgba(5, 150, 105, 0.45);
   }
-
   .btn-outline {
     background: #FFFFFF;
-    border: 1px solid var(--border-bright);
+    border: 1px solid var(--border-color);
     color: var(--text-heading);
     box-shadow: var(--shadow-sm);
   }
   .btn-outline:hover {
-    background: var(--bg-surface);
-    border-color: var(--emerald-primary);
-    color: var(--emerald-primary);
+    border-color: var(--primary);
+    color: var(--primary);
     transform: translateY(-2px);
   }
-
   .btn-wa {
     background: #25D366;
     color: #FFFFFF;
@@ -199,12 +130,10 @@
   .btn-wa:hover {
     background: #20BD5A;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
   }
-
   .btn-block { width: 100%; }
 
-  /* ---------- Header / Nav ---------- */
+  /* ---------- Header ---------- */
   header {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -215,20 +144,16 @@
     transition: all 0.3s ease;
   }
   header.scrolled {
-    background: #FFFFFF;
     box-shadow: var(--shadow-md);
-    border-bottom-color: transparent;
   }
-
   .nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 14px 24px;
+    padding: 16px 24px;
     max-width: 1240px;
     margin: 0 auto;
   }
-
   .brand-logo {
     display: flex;
     align-items: center;
@@ -237,366 +162,179 @@
   .brand-icon {
     width: 42px; height: 42px;
     border-radius: 12px;
-    background: linear-gradient(135deg, #0D9488 0%, #14B8A6 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+    color: #FFF; font-weight: 800; font-size: 20px;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
   }
-  .brand-icon svg { width: 24px; height: 24px; }
   .brand-text {
     font-family: var(--font-heading);
-    font-size: 22px;
-    font-weight: 800;
+    font-size: 22px; font-weight: 800;
     color: var(--text-heading);
     letter-spacing: -0.03em;
   }
-  .brand-text span { color: var(--emerald-primary); }
+  .brand-text span { color: var(--primary); }
   .brand-text small {
-    display: block;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--gold-dark);
-    margin-top: -3px;
+    display: block; font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--gold-dark); margin-top: -3px;
   }
-
-  .nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  .nav-links {
+    display: flex; gap: 8px;
   }
-  .nav-menu a {
-    font-size: 14.5px;
-    font-weight: 600;
-    color: var(--text-main);
-    padding: 8px 16px;
-    border-radius: var(--radius-sm);
+  .nav-links a {
+    font-size: 14.5px; font-weight: 600;
+    color: var(--text-body);
+    padding: 8px 16px; border-radius: var(--radius-sm);
     transition: all 0.2s ease;
   }
-  .nav-menu a:hover {
-    color: var(--emerald-primary);
+  .nav-links a:hover {
+    color: var(--primary);
     background: var(--bg-surface);
   }
-
-  .nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .burger-btn {
-    display: none;
-    padding: 10px;
-    border-radius: var(--radius-sm);
-    background: var(--bg-surface);
-    border: 1px solid var(--border-color);
-    color: var(--text-heading);
-  }
-
-  /* Mobile Drawer */
-  .mobile-drawer {
-    position: fixed;
-    top: 0; right: -100%;
-    width: 300px;
-    height: 100vh;
-    background: #FFFFFF;
-    border-left: 1px solid var(--border-color);
-    z-index: 200;
-    padding: 30px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: -10px 0 40px rgba(0,0,0,0.15);
-  }
-  .mobile-drawer.open { right: 0; }
-  .drawer-overlay {
-    position: fixed; inset: 0;
-    background: rgba(15,23,42,0.5);
-    backdrop-filter: blur(4px);
-    z-index: 199;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-  .drawer-overlay.open { opacity: 1; pointer-events: auto; }
-  .drawer-close { align-self: flex-end; color: var(--text-muted); font-size: 24px; cursor: pointer; }
-  .drawer-links { display: flex; flex-direction: column; gap: 12px; }
-  .drawer-links a { font-size: 16px; font-weight: 600; padding: 10px; border-radius: var(--radius-sm); border-bottom: 1px solid var(--border-color); }
 
   /* ---------- HERO SECTION ---------- */
   .hero-section {
-    position: relative;
-    width: 100%;
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    padding: 140px 0 80px;
-    background: #0F172A;
+    padding: 130px 0 70px;
+    background: linear-gradient(180deg, #F1F5F9 0%, #F8FAFC 100%);
+    border-bottom: 1px solid var(--border-color);
   }
-
-  .hero-bg-slides {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-
-  .hero-bg-slide {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    opacity: 0;
-    transform: scale(1.05);
-    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 7s ease-out;
-    filter: brightness(0.68) contrast(1.08);
-  }
-  .hero-bg-slide.active {
-    opacity: 1;
-    transform: scale(1.12);
-  }
-
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    background:
-      radial-gradient(1200px 700px at 50% 50%, rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.82) 85%),
-      linear-gradient(180deg, rgba(15, 23, 42, 0.78) 0%, rgba(15, 23, 42, 0.48) 50%, rgba(15, 23, 42, 0.92) 100%);
-    pointer-events: none;
-  }
-
-  .hero-container {
-    position: relative;
-    z-index: 5;
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
     align-items: center;
   }
-
-  .hero-badge-pill {
+  .hero-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 20px;
+    padding: 6px 16px;
     border-radius: 999px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(16px);
-    color: #FFFFFF;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    margin-bottom: 22px;
+    font-size: 13px; font-weight: 700;
+    background: var(--bg-accent);
+    border: 1px solid rgba(5, 150, 105, 0.3);
+    color: var(--primary);
+    margin-bottom: 20px;
   }
-
-  .hero-title-main {
-    font-size: clamp(38px, 5.2vw, 70px);
+  .hero-title {
+    font-size: clamp(34px, 4.2vw, 54px);
     font-weight: 800;
-    line-height: 1.08;
-    letter-spacing: -0.035em;
-    color: #FFFFFF;
-    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
-    max-width: 940px;
-  }
-
-  .hero-sub-text {
-    margin-top: 20px;
-    font-size: clamp(16px, 1.8vw, 19.5px);
-    color: rgba(248, 250, 252, 0.88);
-    max-width: 760px;
-    line-height: 1.65;
-    font-weight: 400;
-    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
-  }
-
-  /* Quick Search Booking Bar */
-  .hero-search-bar {
-    margin-top: 36px;
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(20px);
-    border-radius: var(--radius-lg);
-    padding: 16px 20px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
-    display: grid;
-    grid-template-columns: 1.2fr 1.2fr 1fr auto;
-    gap: 14px;
-    align-items: center;
-    width: 100%;
-    max-width: 960px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-  }
-  .search-col {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    gap: 4px;
-  }
-  .search-col label {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--text-muted);
-  }
-  .search-select, .search-input {
-    width: 100%;
-    padding: 9px 12px;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--border-color);
-    background: #F8FAFC;
+    line-height: 1.1;
     color: var(--text-heading);
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 600;
-    outline: none;
   }
-  .search-select:focus, .search-input:focus {
-    border-color: var(--emerald-primary);
+  .hero-desc {
+    margin-top: 16px;
+    font-size: 17px;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+  .hero-stats-row {
+    margin-top: 28px;
+    display: flex;
+    gap: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-color);
+  }
+  .stat-box h4 {
+    font-size: 26px; font-weight: 800; color: var(--primary);
+  }
+  .stat-box p {
+    font-size: 12.5px; color: var(--text-muted); font-weight: 600; margin-top: 2px;
+  }
+
+  /* Quick Search Form Card */
+  .search-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    box-shadow: var(--shadow-lg);
+  }
+  .search-card h3 {
+    font-size: 20px; margin-bottom: 6px;
+  }
+  .search-card p {
+    font-size: 13px; color: var(--text-muted); margin-bottom: 20px;
+  }
+  .form-group {
+    margin-bottom: 16px;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .form-group label {
+    font-size: 12.5px; font-weight: 700; color: var(--text-heading); text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .form-control {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    color: var(--text-heading);
+    font-family: inherit; font-size: 14.5px; font-weight: 600;
+    outline: none; transition: border-color 0.2s ease;
+  }
+  .form-control:focus {
+    border-color: var(--primary);
     background: #FFFFFF;
   }
 
-  .hero-slide-nav {
-    margin-top: 36px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(16px);
-    padding: 8px 20px;
-    border-radius: 999px;
-  }
-  .slide-counter {
-    font-family: var(--font-heading);
-    font-size: 13.5px;
-    font-weight: 700;
-    color: #2DD4BF;
-    letter-spacing: 0.05em;
-  }
-  .slide-divider {
-    width: 1px;
-    height: 16px;
-    background: rgba(255, 255, 255, 0.3);
-  }
-  .slide-dots-line {
-    display: flex;
-    gap: 8px;
-  }
-  .slide-nav-dot {
-    width: 20px;
-    height: 4px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.35);
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  .slide-nav-dot.active {
-    width: 36px;
-    background: #14B8A6;
-    box-shadow: 0 0 12px #14B8A6;
-  }
-  .slide-caption-title {
-    font-size: 13px;
-    color: #F8FAFC;
-    font-weight: 500;
-  }
-
-  /* ---------- TRUST STRIP ---------- */
-  .trust-strip {
+  /* ---------- TRUST BAR ---------- */
+  .trust-bar {
     background: #FFFFFF;
     border-bottom: 1px solid var(--border-color);
-    padding: 24px 0;
-    box-shadow: var(--shadow-sm);
+    padding: 20px 0;
   }
   .trust-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
-  .trust-box {
-    display: flex;
-    align-items: center;
-    gap: 14px;
+  .trust-item {
+    display: flex; align-items: center; gap: 12px;
   }
   .trust-icon {
-    width: 44px; height: 44px;
-    border-radius: 12px;
-    background: var(--bg-accent-light);
-    border: 1px solid var(--border-emerald);
-    color: var(--emerald-primary);
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: var(--bg-accent);
+    color: var(--primary);
     display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
+    font-weight: 800; font-size: 18px; flex-shrink: 0;
   }
-  .trust-icon svg { width: 22px; height: 22px; stroke: currentColor; fill: none; }
-  .trust-info h5 { font-size: 14.5px; font-weight: 700; color: var(--text-heading); }
-  .trust-info p { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .trust-item h5 { font-size: 14px; font-weight: 700; }
+  .trust-item p { font-size: 12px; color: var(--text-muted); }
 
-  /* ---------- SECTION HEADINGS ---------- */
+  /* ---------- SECTION WRAPPERS ---------- */
   .section-pad {
-    padding: 90px 0;
-    position: relative;
-  }
-  .section-pad-alt {
-    background: var(--bg-surface);
-    border-y: 1px solid var(--border-color);
+    padding: 80px 0;
   }
   .section-head {
-    max-width: 640px;
-    margin: 0 auto 50px;
-  }
-  .section-head.center {
     text-align: center;
+    max-width: 620px;
+    margin: 0 auto 40px;
   }
   .section-head h2 {
-    font-size: clamp(28px, 3.6vw, 44px);
-    margin-top: 12px;
+    font-size: clamp(26px, 3.2vw, 40px);
+    margin-top: 10px;
   }
   .section-head p {
-    margin-top: 12px;
-    color: var(--text-muted);
-    font-size: 16px;
+    font-size: 15.5px; color: var(--text-muted); margin-top: 10px;
   }
 
-  /* ---------- FLEET SECTION & FILTER TABS ---------- */
+  /* ---------- FLEET CATEGORY TABS & GRID ---------- */
   .fleet-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
+    display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 36px;
   }
   .tab-btn {
-    padding: 10px 22px;
-    border-radius: 999px;
-    font-size: 14px;
-    font-weight: 600;
-    background: #FFFFFF;
-    border: 1px solid var(--border-color);
-    color: var(--text-muted);
-    cursor: pointer;
-    transition: all 0.25s ease;
+    padding: 10px 22px; border-radius: 999px;
+    font-size: 14px; font-weight: 600;
+    background: #FFFFFF; border: 1px solid var(--border-color);
+    color: var(--text-muted); cursor: pointer; transition: all 0.25s ease;
     box-shadow: var(--shadow-sm);
   }
-  .tab-btn:hover {
-    color: var(--emerald-primary);
-    border-color: var(--emerald-primary);
-  }
-  .tab-btn.active {
-    background: var(--emerald-primary);
-    color: #FFFFFF;
-    font-weight: 700;
-    border-color: var(--emerald-primary);
-    box-shadow: 0 4px 15px rgba(13, 148, 136, 0.3);
+  .tab-btn:hover, .tab-btn.active {
+    background: var(--primary); color: #FFFFFF;
+    border-color: var(--primary); font-weight: 700;
   }
 
   .fleet-grid {
@@ -606,771 +344,349 @@
   }
 
   .fleet-card {
-    background: var(--bg-card);
+    background: #FFFFFF;
     border: 1px solid var(--border-color);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex; flex-direction: column;
+    transition: all 0.3s ease;
     box-shadow: var(--shadow-md);
   }
   .fleet-card:hover {
     transform: translateY(-6px);
-    border-color: var(--emerald-primary);
-    box-shadow: var(--shadow-lg), 0 0 20px var(--emerald-glow);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-lg);
   }
 
-  .fleet-img-wrap {
-    position: relative;
-    aspect-ratio: 16/10;
-    overflow: hidden;
-    background: var(--bg-surface);
-  }
-  .fleet-img-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
-  .fleet-card:hover .fleet-img-wrap img {
-    transform: scale(1.06);
-  }
-
-  .fleet-tag-pop {
-    position: absolute;
-    top: 14px; left: 14px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(8px);
-    border: 1px solid var(--border-emerald);
-    color: var(--emerald-primary);
-    font-size: 11.5px;
-    font-weight: 700;
-    padding: 4px 12px;
-    border-radius: 999px;
-    box-shadow: var(--shadow-sm);
-  }
-
-  .fleet-body {
-    padding: 24px;
+  /* Vector Visual Header for Car Card */
+  .card-visual-header {
+    background: linear-gradient(135deg, #F1F5F9 0%, #E2E8F0 100%);
+    height: 190px;
     display: flex;
     flex-direction: column;
-    flex: 1;
-  }
-  .fleet-title-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-  .fleet-title {
-    font-size: 19.5px;
-    font-weight: 700;
-    color: var(--text-heading);
-  }
-  .fleet-sub {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-top: 4px;
-  }
-
-  .fleet-specs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 18px 0;
-  }
-  .spec-pill {
-    display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--text-main);
-    background: var(--bg-surface);
-    border: 1px solid var(--border-color);
-    padding: 5px 10px;
-    border-radius: 6px;
-  }
-  .spec-pill svg { width: 14px; height: 14px; stroke: var(--emerald-primary); fill: none; }
-
-  .fleet-footer {
-    margin-top: auto;
-    padding-top: 18px;
-    border-top: 1px solid var(--border-color);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .price-tag small {
-    font-size: 11px;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-tag b {
-    font-family: var(--font-heading);
-    font-size: 20px;
-    color: var(--emerald-primary);
-  }
-
-  /* Fleet Yard Showcase Gallery (AUTHENTIC TOYOTA INNOVA & MARUTI ERTIGA) */
-  .yard-gallery {
-    margin-top: 48px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-  .yard-item {
+    justify-content: center;
     position: relative;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    border: 1px solid var(--border-color);
-    height: 270px;
-    cursor: pointer;
-    box-shadow: var(--shadow-md);
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
   }
-  .yard-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
-  .yard-item:hover img {
-    transform: scale(1.05);
-  }
-  .yard-caption {
+  .card-badge-top {
     position: absolute;
-    bottom: 16px; left: 16px;
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(10px);
+    top: 12px; left: 12px;
+    background: #FFFFFF;
     border: 1px solid var(--border-color);
-    padding: 8px 18px;
-    border-radius: 999px;
-    font-size: 13px;
-    font-weight: 700;
+    color: var(--primary);
+    font-size: 11px; font-weight: 700;
+    padding: 4px 12px; border-radius: 999px;
+  }
+  .car-illustration-svg {
+    width: 140px; height: 75px;
+  }
+  .car-model-tag {
+    margin-top: 8px;
+    font-family: var(--font-heading);
+    font-size: 13px; font-weight: 800;
     color: var(--text-heading);
-    box-shadow: var(--shadow-sm);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
 
-  /* ---------- INSTANT FARE ESTIMATOR WIDGET ---------- */
+  .fleet-card-body {
+    padding: 24px;
+    display: flex; flex-direction: column; flex: 1;
+  }
+  .fleet-card-title {
+    font-size: 20px; font-weight: 700; color: var(--text-heading);
+  }
+  .fleet-card-sub {
+    font-size: 13px; color: var(--text-muted); margin-top: 4px; line-height: 1.5;
+  }
+  .fleet-specs-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 18px 0;
+  }
+  .spec-item {
+    font-size: 12px; font-weight: 600; color: var(--text-body);
+    background: var(--bg-surface); border: 1px solid var(--border-color);
+    padding: 6px 10px; border-radius: 6px; display: flex; align-items: center; gap: 6px;
+  }
+
+  .fleet-card-footer {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .price-box small {
+    font-size: 11px; color: var(--text-muted); text-transform: uppercase; font-weight: 700;
+  }
+  .price-box b {
+    font-family: var(--font-heading); font-size: 22px; color: var(--primary); display: block; margin-top: -2px;
+  }
+
+  /* ---------- INSTANT FARE ESTIMATOR ---------- */
+  .estimator-section {
+    background: var(--bg-surface);
+    border-y: 1px solid var(--border-color);
+  }
   .estimator-card {
     background: #FFFFFF;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-xl);
-    padding: 42px;
+    padding: 40px;
     box-shadow: var(--shadow-lg);
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 980px; margin: 0 auto;
   }
   .estimator-grid {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 40px;
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px;
   }
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 20px;
-  }
-  .form-group label {
-    font-size: 13.5px;
-    font-weight: 700;
-    color: var(--text-heading);
-  }
-  .form-control {
-    width: 100%;
-    padding: 13px 16px;
-    border-radius: var(--radius-md);
-    background: #F8FAFC;
-    border: 1px solid var(--border-bright);
-    color: var(--text-heading);
-    font-family: inherit;
-    font-size: 14.5px;
-    outline: none;
-    transition: border-color 0.2s ease;
-  }
-  .form-control:focus {
-    border-color: var(--emerald-primary);
-    background: #FFFFFF;
-    box-shadow: 0 0 10px var(--emerald-glow);
-  }
-
-  .estimator-result {
+  .calc-summary {
     background: var(--bg-surface);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
-    padding: 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .result-header {
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 16px;
-  }
-  .result-header h4 { font-size: 18px; color: var(--emerald-primary); }
-  .calc-breakdown {
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    padding: 24px;
+    display: flex; flex-direction: column; justify-content: space-between;
   }
   .calc-row {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-    color: var(--text-main);
+    display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 12px;
   }
   .calc-total {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding-top: 16px;
-    border-top: 1px dashed var(--border-bright);
+    padding-top: 16px; border-top: 1px dashed var(--border-bright);
+    display: flex; justify-content: space-between; align-items: baseline;
   }
-  .calc-total span { font-size: 15px; font-weight: 700; color: var(--text-heading); }
-  .calc-total b { font-family: var(--font-heading); font-size: 32px; color: var(--emerald-primary); }
+  .calc-total b { font-family: var(--font-heading); font-size: 32px; color: var(--primary); }
 
-  /* ---------- BANDHAVGARH SAFARI ZONE EXPLORER ---------- */
-  .safari-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: center;
-  }
-  .safari-gallery-stack {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 16px;
-  }
-  .safari-img-tall {
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    aspect-ratio: 3/4;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-md);
-  }
-  .safari-img-tall img { width: 100%; height: 100%; object-fit: cover; }
-
-  .safari-img-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  .safari-img-short {
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    aspect-ratio: 4/3;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-md);
-  }
-  .safari-img-short img { width: 100%; height: 100%; object-fit: cover; }
-
-  /* Zone Tab Switcher */
-  .zone-container {
-    margin-top: 50px;
-  }
-  .zone-tabs {
-    display: flex;
-    gap: 12px;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 16px;
-    overflow-x: auto;
-  }
-  .zone-tab-btn {
-    padding: 12px 24px;
-    border-radius: var(--radius-md);
+  /* ---------- BANDHAVGARH SAFARI ---------- */
+  .safari-box {
     background: #FFFFFF;
     border: 1px solid var(--border-color);
-    color: var(--text-muted);
-    font-weight: 600;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: all 0.25s ease;
-    box-shadow: var(--shadow-sm);
-  }
-  .zone-tab-btn.active {
-    background: var(--bg-accent-light);
-    border-color: var(--emerald-primary);
-    color: var(--emerald-primary);
-    font-weight: 700;
-  }
-  .zone-content-box {
-    background: #FFFFFF;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-lg);
-    padding: 32px;
-    margin-top: 24px;
+    border-radius: var(--radius-xl);
+    padding: 40px;
     box-shadow: var(--shadow-md);
   }
+  .zone-tabs-line {
+    display: flex; gap: 10px; margin-top: 24px; border-bottom: 1px solid var(--border-color); padding-bottom: 16px; overflow-x: auto;
+  }
+  .zone-btn {
+    padding: 10px 20px; border-radius: var(--radius-md); background: var(--bg-surface); border: 1px solid var(--border-color);
+    color: var(--text-muted); font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap;
+  }
+  .zone-btn.active {
+    background: var(--bg-accent); border-color: var(--primary); color: var(--primary); font-weight: 700;
+  }
 
-  /* ---------- PACKAGES SECTION ---------- */
+  /* ---------- PACKAGES ---------- */
   .pack-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
   }
   .pack-card {
     background: #FFFFFF;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-xl);
-    padding: 36px 30px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    transition: all 0.3s ease;
+    padding: 32px 26px;
+    display: flex; flex-direction: column;
     box-shadow: var(--shadow-md);
-  }
-  .pack-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
   }
   .pack-card.featured {
-    border-color: var(--emerald-primary);
-    box-shadow: 0 0 30px var(--emerald-glow), var(--shadow-lg);
+    border-color: var(--primary);
+    box-shadow: 0 0 30px var(--primary-glow), var(--shadow-lg);
   }
-  .pack-feat-badge {
-    position: absolute;
-    top: -14px; left: 30px;
-    background: linear-gradient(135deg, #0D9488, #0F766E);
-    color: #FFFFFF;
-    font-size: 11.5px;
-    font-weight: 800;
-    padding: 4px 14px;
-    border-radius: 999px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-  .pack-title { font-size: 24px; margin-top: 8px; color: var(--text-heading); }
-  .pack-price {
-    margin: 20px 0;
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-  }
-  .pack-price b { font-size: 34px; color: var(--emerald-primary); }
-  .pack-price span { font-size: 13px; color: var(--text-muted); }
-
-  .pack-features {
-    list-style: none;
-    margin: 20px 0 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  .pack-features li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    color: var(--text-main);
-  }
-  .pack-features svg { width: 18px; height: 18px; stroke: var(--emerald-primary); flex-shrink: 0; }
-
-  /* ---------- WHY US GRID ---------- */
-  .why-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-  .why-card {
-    background: #FFFFFF;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-lg);
-    padding: 28px 24px;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow-sm);
-  }
-  .why-card:hover {
-    border-color: var(--emerald-primary);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-  }
-  .why-icon {
-    width: 46px; height: 46px;
-    border-radius: 12px;
-    background: var(--bg-accent-light);
-    border: 1px solid var(--border-emerald);
-    color: var(--emerald-primary);
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 18px;
-  }
-  .why-icon svg { width: 22px; height: 22px; stroke: currentColor; fill: none; }
-
-  /* ---------- TESTIMONIALS ---------- */
-  .quote-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-  .quote-card {
-    background: #FFFFFF;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-lg);
-    padding: 30px 26px;
-    box-shadow: var(--shadow-sm);
-  }
-  .quote-stars { display: flex; gap: 4px; color: #F59E0B; margin-bottom: 16px; }
-  .quote-stars svg { width: 16px; height: 16px; fill: currentColor; }
-  .quote-text { font-size: 15px; color: var(--text-main); line-height: 1.7; }
-  .quote-author {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 20px;
-    padding-top: 16px;
-    border-top: 1px solid var(--border-color);
-  }
-  .author-avatar {
-    width: 40px; height: 40px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #0D9488, #14B8A6);
-    color: #FFFFFF;
-    font-weight: 800;
-    font-size: 14px;
-    display: flex; align-items: center; justify-content: center;
-  }
-
-  /* ---------- CTA BANNER ---------- */
-  .cta-box {
-    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
-    border-radius: var(--radius-xl);
-    padding: 60px 48px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    color: #FFFFFF;
-  }
-  .cta-box h2 { color: #FFFFFF; }
-  .cta-box p { color: #94A3B8; }
+  .pack-title { font-size: 22px; margin-top: 8px; }
+  .pack-price { font-size: 32px; font-weight: 800; color: var(--primary); margin: 16px 0; }
+  .pack-list { list-style: none; margin-bottom: 24px; display: flex; flex-direction: column; gap: 10px; font-size: 14px; }
+  .pack-list li::before { content: "✓ "; color: var(--primary); font-weight: 800; }
 
   /* ---------- FOOTER ---------- */
   footer {
     background: var(--navy-dark);
     color: #94A3B8;
+    padding: 70px 0 30px;
     border-top: 1px solid var(--border-color);
-    padding: 80px 0 30px;
   }
   .foot-grid {
-    display: grid;
-    grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr;
-    gap: 40px;
+    display: grid; grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr; gap: 40px;
   }
-  .foot-col h4 {
-    font-size: 15px;
-    color: #FFFFFF;
-    margin-bottom: 20px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-  .foot-links {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .foot-links a {
-    color: #94A3B8;
-    font-size: 14px;
-  }
-  .foot-links a:hover { color: #14B8A6; }
+  .foot-col h4 { color: #FFFFFF; font-size: 15px; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .foot-links { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px; }
   .foot-bottom {
-    margin-top: 60px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    color: #64748B;
+    margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex; justify-content: space-between; font-size: 13px; color: #64748B;
   }
 
-  /* ---------- FLOATING WHATSAPP BUTTON ---------- */
-  .wa-float-btn {
-    position: fixed;
-    bottom: 28px; right: 28px;
-    z-index: 90;
-    width: 60px; height: 60px;
-    border-radius: 50%;
-    background: #25D366;
+  /* Floating WA */
+  .wa-float {
+    position: fixed; bottom: 28px; right: 28px; z-index: 90;
+    width: 58px; height: 58px; border-radius: 50%; background: #25D366;
     display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
     transition: transform 0.25s ease;
-    animation: waPulse 2.5s infinite;
   }
-  .wa-float-btn:hover { transform: scale(1.1); }
-  .wa-float-btn svg { width: 32px; height: 32px; fill: #FFF; }
-  @keyframes waPulse {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
-    70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-  }
+  .wa-float:hover { transform: scale(1.1); }
+  .wa-float svg { width: 32px; height: 32px; fill: #FFF; }
 
-  /* ---------- MODALS ---------- */
+  /* Modal */
   .modal-backdrop {
-    position: fixed; inset: 0;
-    background: rgba(15, 23, 42, 0.7);
-    backdrop-filter: blur(8px);
-    z-index: 300;
-    display: flex; align-items: center; justify-content: center;
-    padding: 20px;
-    opacity: 0; pointer-events: none;
-    transition: opacity 0.3s ease;
+    position: fixed; inset: 0; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(8px);
+    z-index: 300; display: flex; align-items: center; justify-content: center; padding: 20px;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
   }
   .modal-backdrop.open { opacity: 1; pointer-events: auto; }
   .modal-box {
-    background: #FFFFFF;
-    border-radius: var(--radius-xl);
-    padding: 36px;
-    max-width: 520px;
-    width: 100%;
-    position: relative;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
-    transform: translateY(20px);
-    transition: transform 0.3s ease;
+    background: #FFFFFF; border-radius: var(--radius-xl); padding: 36px; max-width: 500px; width: 100%; position: relative; box-shadow: var(--shadow-lg);
   }
-  .modal-backdrop.open .modal-box { transform: translateY(0); }
-  .modal-close {
-    position: absolute; top: 20px; right: 20px;
-    color: var(--text-muted); font-size: 22px; cursor: pointer;
-  }
+  .modal-close { position: absolute; top: 20px; right: 20px; font-size: 22px; cursor: pointer; color: var(--text-muted); }
 
-  /* Lightbox */
-  .lightbox-box {
-    max-width: 900px;
-    width: 100%;
-    background: transparent;
-    padding: 0;
-    box-shadow: none;
-  }
-  .lightbox-img {
-    width: 100%;
-    border-radius: var(--radius-lg);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  /* Scroll Reveal */
-  .reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .reveal.in {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* ---------- RESPONSIVE LAYOUT ---------- */
-  @media (max-width: 1040px) {
-    .hero-search-bar { grid-template-columns: 1fr 1fr; }
+  /* Responsive */
+  @media (max-width: 992px) {
+    .hero-grid { grid-template-columns: 1fr; }
     .trust-grid { grid-template-columns: repeat(2, 1fr); }
     .fleet-grid { grid-template-columns: repeat(2, 1fr); }
-    .pack-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
-    .why-grid { grid-template-columns: repeat(2, 1fr); }
-    .quote-grid { grid-template-columns: 1fr; }
     .estimator-grid { grid-template-columns: 1fr; }
-    .safari-grid { grid-template-columns: 1fr; }
+    .pack-grid { grid-template-columns: 1fr; }
     .foot-grid { grid-template-columns: 1fr 1fr; }
-    .cta-box { flex-direction: column; text-align: center; padding: 40px 24px; }
   }
-
-  @media (max-width: 768px) {
-    .nav-menu { display: none; }
-    .burger-btn { display: block; }
-    .hero-search-bar { grid-template-columns: 1fr; }
-    .trust-grid { grid-template-columns: 1fr; }
+  @media (max-width: 640px) {
     .fleet-grid { grid-template-columns: 1fr; }
-    .why-grid { grid-template-columns: 1fr; }
-    .yard-gallery { grid-template-columns: 1fr; }
-    .section-pad { padding: 60px 0; }
+    .trust-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
     .foot-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 
-<!-- HEADER / NAVIGATION -->
+<!-- HEADER -->
 <header id="siteHeader">
   <div class="nav-bar">
     <a href="#top" class="brand-logo">
-      <div class="brand-icon">
-        <svg viewBox="0 0 24 24" fill="none">
-          <path d="M4 15s3-3 8-3 8 3 8 3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
-          <path d="M6 10L12 4l6 6" stroke="#FEF3C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="12" cy="16" r="2" fill="#FFFFFF"/>
-        </svg>
-      </div>
+      <div class="brand-icon">V</div>
       <div class="brand-text">
         VYOM<span>TRAVELS</span>
-        <small>Madhya Pradesh &amp; Bandhavgarh</small>
+        <small>Aakash Jaiswal • Indore &amp; MP</small>
       </div>
     </a>
 
-    <nav class="nav-menu">
+    <nav class="nav-links">
       <a href="#fleet">Our Fleet</a>
-      <a href="#estimator">Fare Estimator</a>
-      <a href="#safari">Tiger Safaris</a>
-      <a href="#packages">Packages</a>
-      <a href="#why">Why Us</a>
+      <a href="#estimator">Fare Calculator</a>
+      <a href="#safari">Bandhavgarh Safaris</a>
+      <a href="#packages">Tour Packages</a>
       <a href="#contact">Contact</a>
     </nav>
 
-    <div class="nav-actions">
-      <button class="btn btn-emerald btn-sm" onclick="openBookingModal('Header Inquiry')">
-        Book Ride / Safari
-      </button>
-      <button class="burger-btn" id="burgerToggle" aria-label="Toggle menu">
-        <svg style="width:22px;height:22px" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
-    </div>
+    <button class="btn btn-primary btn-sm" onclick="openModal('Header Reservation')">
+      Book Ride / Safari
+    </button>
   </div>
 </header>
 
-<!-- MOBILE DRAWER -->
-<div class="drawer-overlay" id="drawerOverlay"></div>
-<div class="mobile-drawer" id="mobileDrawer">
-  <div class="drawer-close" id="drawerClose">&times;</div>
-  <div class="drawer-links">
-    <a href="#fleet" onclick="closeDrawer()">The Fleet</a>
-    <a href="#estimator" onclick="closeDrawer()">Fare Estimator</a>
-    <a href="#safari" onclick="closeDrawer()">Tiger Safaris</a>
-    <a href="#packages" onclick="closeDrawer()">Packages</a>
-    <a href="#why" onclick="closeDrawer()">Why Choose Us</a>
-    <a href="#contact" onclick="closeDrawer()">Contact Us</a>
-  </div>
-  <button class="btn btn-wa btn-block" style="margin-top:auto" onclick="openBookingModal('Mobile Menu')">
-    Contact on WhatsApp
-  </button>
-</div>
-
 <main id="top">
 
-  <!-- HERO SECTION (FULL LIGHT BACKGROUND SLIDER WITH SEARCH BAR) -->
-  <section class="hero-section" id="hero">
-    <!-- Full-Bleed Background Images (Real Executive Innova, Ertiga & Safari) -->
-    <div class="hero-bg-slides" id="heroBgSlides">
-      <img class="hero-bg-slide active" src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1920&q=85" alt="Toyota Innova Crysta MPV Outstation">
-      <img class="hero-bg-slide" src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1920&q=85" alt="Maruti Suzuki Ertiga Family MPV">
-      <img class="hero-bg-slide" src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1920&q=85" alt="BMW 5 Series Chauffeur Luxury Sedan">
-      <img class="hero-bg-slide" src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1920&q=85" alt="Bandhavgarh Bengal Tiger Safari Jeep">
-    </div>
-
-    <!-- Gradient Overlay -->
-    <div class="hero-overlay"></div>
-
+  <!-- HERO SECTION -->
+  <section class="hero-section">
     <div class="wrap">
-      <div class="hero-container">
-        <div class="hero-badge-pill">
-          <span class="dot-live"></span> Bandhavgarh Oct–Jun Safari Season Open • 48-Hour Permit Turnaround
+      <div class="hero-grid">
+        <div>
+          <div class="hero-badge">
+            • Verified MP Govt. Permit Partner • 100% On-Time Guarantee
+          </div>
+          <h1 class="hero-title">
+            Certified Outstation Cars &amp;<br>
+            <span style="color:var(--primary)">Bandhavgarh Tiger Safaris</span>
+          </h1>
+          <p class="hero-sub-text hero-desc">
+            Book official Toyota Innova Crysta, Maruti Suzuki Ertiga 7-seaters, executive sedans (Verna, Dzire, Aura), &amp; confirmed Bandhavgarh National Park tiger safari permits across Madhya Pradesh.
+          </p>
+
+          <div class="hero-stats-row">
+            <div class="stat-box">
+              <h4>Toyota Innova</h4>
+              <p>Crysta &amp; Hycross Fleet</p>
+            </div>
+            <div class="stat-box">
+              <h4>Maruti Ertiga</h4>
+              <p>Budget Family 7-Seater</p>
+            </div>
+            <div class="stat-box">
+              <h4>100% Guaranteed</h4>
+              <p>Safari Gate Permits</p>
+            </div>
+          </div>
         </div>
 
-        <h1 class="hero-title-main">
-          Executive Car Rentals.<br>
-          <span style="color:#2DD4BF">Wild Tiger Trails Beyond.</span>
-        </h1>
+        <!-- QUICK BOOKING SEARCH CARD -->
+        <div class="search-card">
+          <h3>Quick Rate Query</h3>
+          <p>Get an instant quote &amp; availability on WhatsApp</p>
 
-        <p class="hero-sub-text">
-          Chauffeured &amp; self-drive rentals across MP — Toyota Innova Crysta/Hycross, Maruti Suzuki Ertiga, BMW, Audi A6, Verna, Dzire, Aura, Swift — paired with confirmed Bandhavgarh National Park safari permits.
-        </p>
+          <form onsubmit="submitHeroSearch(event)">
+            <div class="form-group">
+              <label for="searchCar">Select Car Model</label>
+              <select id="searchCar" class="form-control">
+                <option value="Toyota Innova Crysta (7 Seater)" selected>Toyota Innova Crysta (7 Seater MPV)</option>
+                <option value="Maruti Suzuki Ertiga (7 Seater)">Maruti Suzuki Ertiga (7 Seater MPV)</option>
+                <option value="Toyota Innova Hycross (Hybrid)">Toyota Innova Hycross (Hybrid MPV)</option>
+                <option value="Hyundai Verna">Hyundai Verna (Executive Sedan)</option>
+                <option value="Maruti Suzuki Dzire">Maruti Suzuki Dzire (Compact Sedan)</option>
+                <option value="Hyundai Aura">Hyundai Aura (Compact Sedan)</option>
+                <option value="Maruti Suzuki Swift">Maruti Suzuki Swift (Hatchback)</option>
+                <option value="BMW 5 Series Chauffeur">BMW 5 Series (Luxury Sedan)</option>
+                <option value="Audi A6 Luxury">Audi A6 (Luxury Sedan)</option>
+                <option value="Bandhavgarh Safari Combo">Bandhavgarh Tiger Safari Package</option>
+              </select>
+            </div>
 
-        <!-- QUICK BOOKING SEARCH BAR -->
-        <div class="hero-search-bar">
-          <div class="search-col">
-            <label for="heroVehicle">Select Vehicle Model</label>
-            <select id="heroVehicle" class="search-select">
-              <option value="Toyota Innova Crysta" selected>Toyota Innova Crysta (7 Seater)</option>
-              <option value="Maruti Suzuki Ertiga">Maruti Suzuki Ertiga (7 Seater MPV)</option>
-              <option value="Toyota Innova Hycross">Toyota Innova Hycross (Hybrid MPV)</option>
-              <option value="BMW 5 Series">BMW 5 Series (Luxury Sedan)</option>
-              <option value="Audi A6">Audi A6 (Luxury Sedan)</option>
-              <option value="Hyundai Verna">Hyundai Verna (Executive Sedan)</option>
-              <option value="Maruti Suzuki Dzire">Maruti Suzuki Dzire (Sedan)</option>
-              <option value="Hyundai Aura">Hyundai Aura (Sedan)</option>
-              <option value="Maruti Suzuki Swift">Maruti Suzuki Swift (Hatchback)</option>
-              <option value="Bandhavgarh Safari Pass">Bandhavgarh Tiger Safari Combo</option>
-            </select>
-          </div>
+            <div class="form-group">
+              <label for="searchTrip">Trip Type</label>
+              <select id="searchTrip" class="form-control">
+                <option value="Outstation Drive">Outstation / Intercity Trip</option>
+                <option value="Airport Pickup">Airport Pickup &amp; Drop</option>
+                <option value="Local Rental 8h/80km">Local City Rental (8h / 80km)</option>
+                <option value="Bandhavgarh Expedition">Tiger Safari Expedition</option>
+              </select>
+            </div>
 
-          <div class="search-col">
-            <label for="heroTripType">Trip Requirement</label>
-            <select id="heroTripType" class="search-select">
-              <option value="Outstation Trip">Outstation / Intercity Drive</option>
-              <option value="Airport Pickup">Airport Pickup &amp; Drop</option>
-              <option value="Local 8h/80km">Local City Rental (8h/80km)</option>
-              <option value="Safari Package">Tiger Safari Expedition</option>
-            </select>
-          </div>
+            <div class="form-group">
+              <label for="searchDate">Travel Date</label>
+              <input type="date" id="searchDate" class="form-control" required>
+            </div>
 
-          <div class="search-col">
-            <label for="heroDate">Travel Date</label>
-            <input type="date" id="heroDate" class="search-input">
-          </div>
-
-          <button class="btn btn-emerald" onclick="submitQuickHeroSearch()">
-            Estimate &amp; Book
-          </button>
-        </div>
-
-        <!-- Slider Control Bar -->
-        <div class="hero-slide-nav">
-          <span class="slide-counter" id="slideCounter">01 / 04</span>
-          <div class="slide-divider"></div>
-          <div class="slide-dots-line">
-            <div class="slide-nav-dot active" onclick="setHeroSlide(0)"></div>
-            <div class="slide-nav-dot" onclick="setHeroSlide(1)"></div>
-            <div class="slide-nav-dot" onclick="setHeroSlide(2)"></div>
-            <div class="slide-nav-dot" onclick="setHeroSlide(3)"></div>
-          </div>
-          <div class="slide-divider"></div>
-          <span class="slide-caption-title" id="slideCaptionText">Toyota Innova Crysta MPV</span>
+            <button type="submit" class="btn btn-primary btn-block" style="margin-top:10px">
+              Check Availability &amp; Rate
+            </button>
+          </form>
         </div>
       </div>
     </div>
   </section>
 
   <!-- TRUST STRIP -->
-  <section class="trust-strip">
+  <section class="trust-bar">
     <div class="wrap">
       <div class="trust-grid">
-        <div class="trust-box">
-          <div class="trust-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-          </div>
-          <div class="trust-info">
+        <div class="trust-item">
+          <div class="trust-icon">✓</div>
+          <div>
             <h5>Govt. Approved Permits</h5>
             <p>Direct forest portal booking</p>
           </div>
         </div>
-
-        <div class="trust-box">
-          <div class="trust-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          </div>
-          <div class="trust-info">
+        <div class="trust-item">
+          <div class="trust-icon">⏱</div>
+          <div>
             <h5>100% On-Time Pickup</h5>
             <p>Indore &amp; Jabalpur airports</p>
           </div>
         </div>
-
-        <div class="trust-box">
-          <div class="trust-icon">
-            <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <div class="trust-info">
-            <h5>Verified Chauffeurs</h5>
-            <p>Background checked &amp; polite</p>
+        <div class="trust-item">
+          <div class="trust-icon">👨‍✈️</div>
+          <div>
+            <h5>Polite Chauffeurs</h5>
+            <p>Background checked &amp; verified</p>
           </div>
         </div>
-
-        <div class="trust-box">
-          <div class="trust-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <div class="trust-info">
+        <div class="trust-item">
+          <div class="trust-icon">💵</div>
+          <div>
             <h5>Transparent Pricing</h5>
             <p>Zero hidden driver fees</p>
           </div>
@@ -1379,305 +695,348 @@
     </div>
   </section>
 
-  <!-- FLEET SHOWCASE SECTION (INNOVA & ERTIGA HIGHLIGHTED) -->
+  <!-- FLEET SHOWCASE -->
   <section class="section-pad" id="fleet">
     <div class="wrap">
-      <div class="section-head center reveal">
-        <div class="badge">Verified Fleet</div>
-        <h2>Our Practical &amp; Executive Fleet</h2>
-        <p>Featuring Toyota Innova Crysta, Maruti Suzuki Ertiga 7-seaters, executive sedans &amp; luxury cars — sanitized before every trip.</p>
+      <div class="section-head">
+        <div class="hero-badge">Authentic Fleet</div>
+        <h2>Our Official Car Rentals</h2>
+        <p>Honest specifications, clear daily rates, and 25-point mechanical inspection before every departure.</p>
       </div>
 
       <!-- FILTER TABS -->
       <div class="fleet-tabs">
-        <button class="tab-btn active" onclick="filterFleet('all', this)">All Vehicles</button>
-        <button class="tab-btn" onclick="filterFleet('suv', this)">SUVs &amp; MPVs (Innova &amp; Ertiga)</button>
-        <button class="tab-btn" onclick="filterFleet('sedan', this)">Executive Sedans (Verna, Dzire, Aura)</button>
-        <button class="tab-btn" onclick="filterFleet('luxury', this)">Luxury (BMW &amp; Audi)</button>
-        <button class="tab-btn" onclick="filterFleet('self-drive', this)">Self-Drive</button>
+        <button class="tab-btn active" onclick="filterCategory('all', this)">All Vehicles</button>
+        <button class="tab-btn" onclick="filterCategory('mpv', this)">7-Seater MPVs (Innova &amp; Ertiga)</button>
+        <button class="tab-btn" onclick="filterCategory('sedan', this)">Sedans (Verna, Dzire, Aura)</button>
+        <button class="tab-btn" onclick="filterCategory('luxury', this)">Luxury (BMW &amp; Audi)</button>
+        <button class="tab-btn" onclick="filterCategory('selfdrive', this)">Self-Drive (Swift)</button>
       </div>
 
       <div class="fleet-grid">
-        <!-- VEHICLE 1: TOYOTA INNOVA CRYSTA -->
-        <div class="fleet-card reveal" data-category="suv chauffeur">
-          <div class="fleet-img-wrap">
-            <span class="fleet-tag-pop">Most Popular MPV</span>
-            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=700&q=80" alt="Toyota Innova Crysta">
+
+        <!-- CAR 1: TOYOTA INNOVA CRYSTA -->
+        <div class="fleet-card" data-category="mpv">
+          <div class="card-visual-header">
+            <span class="card-badge-top">Top Rated MPV</span>
+            <!-- Custom Vector Vehicle SVG Representation -->
+            <svg class="car-illustration-svg" viewBox="0 0 160 80">
+              <path d="M15 50 L35 32 L75 25 L125 28 L145 50 L150 58 L10 58 Z" fill="#0D9488" opacity="0.9"/>
+              <path d="M40 34 L72 28 L72 45 L32 45 Z" fill="#FFFFFF" opacity="0.8"/>
+              <path d="M78 28 L120 30 L115 45 L78 45 Z" fill="#FFFFFF" opacity="0.8"/>
+              <circle cx="38" cy="58" r="10" fill="#0F172A"/>
+              <circle cx="38" cy="58" r="4" fill="#CBD5E1"/>
+              <circle cx="120" cy="58" r="10" fill="#0F172A"/>
+              <circle cx="120" cy="58" r="4" fill="#CBD5E1"/>
+            </svg>
+            <span class="car-model-tag">Toyota Innova Crysta</span>
           </div>
-          <div class="fleet-body">
-            <div class="fleet-title-row">
-              <h3 class="fleet-title">Toyota Innova Crysta</h3>
+          <div class="fleet-card-body">
+            <h3 class="fleet-card-title">Toyota Innova Crysta</h3>
+            <p class="fleet-card-sub">Premium 7-seater MPV engineered for outstation highway comfort &amp; tiger safari roads.</p>
+            <div class="fleet-specs-grid">
+              <div class="spec-item">👥 7 Passengers</div>
+              <div class="spec-item">⛽ Diesel Engine</div>
+              <div class="spec-item">🧳 3 Big Bags</div>
+              <div class="spec-item">🛣️ High Clearance</div>
             </div>
-            <p class="fleet-sub">Robust 7-seater MPV engineered for highway outstation &amp; Bandhavgarh runs</p>
-
-            <div class="fleet-specs">
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M17 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M5 16V6a1 1 0 0 1 1-1h6l4 4h2a1 1 0 0 1 1 1v6"/></svg> 7 Seats</span>
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M3 21h18M6 21V9l6-4 6 4v12"/></svg> Diesel</span>
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg> High Ground Clearance</span>
-            </div>
-
-            <div class="fleet-footer">
-              <div class="price-tag">
-                <small>Starting from</small>
-                <b>₹4,200 <span style="font-size:13px;color:var(--text-muted);font-weight:400">/day</span></b>
+            <div class="fleet-card-footer">
+              <div class="price-box">
+                <small>Rate per day</small>
+                <b>₹4,200</b>
               </div>
-              <button class="btn btn-emerald btn-sm" onclick="openBookingModal('Toyota Innova Crysta')">Book Car</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal('Toyota Innova Crysta')">Book Vehicle</button>
             </div>
           </div>
         </div>
 
-        <!-- VEHICLE 2: MARUTI SUZUKI ERTIGA -->
-        <div class="fleet-card reveal" data-category="suv chauffeur">
-          <div class="fleet-img-wrap">
-            <span class="fleet-tag-pop" style="background:var(--bg-accent-light);color:var(--emerald-primary)">Family Top Choice</span>
-            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=700&q=80" alt="Maruti Suzuki Ertiga">
+        <!-- CAR 2: MARUTI SUZUKI ERTIGA -->
+        <div class="fleet-card" data-category="mpv">
+          <div class="card-visual-header">
+            <span class="card-badge-top" style="color:var(--gold-dark)">Family Favorite</span>
+            <svg class="car-illustration-svg" viewBox="0 0 160 80">
+              <path d="M18 50 L38 34 L78 28 L122 30 L142 50 L148 58 L12 58 Z" fill="#2563EB" opacity="0.85"/>
+              <path d="M42 36 L75 30 L75 45 L35 45 Z" fill="#FFFFFF" opacity="0.8"/>
+              <path d="M80 30 L118 32 L112 45 L80 45 Z" fill="#FFFFFF" opacity="0.8"/>
+              <circle cx="40" cy="58" r="9.5" fill="#0F172A"/>
+              <circle cx="40" cy="58" r="4" fill="#CBD5E1"/>
+              <circle cx="118" cy="58" r="9.5" fill="#0F172A"/>
+              <circle cx="118" cy="58" r="4" fill="#CBD5E1"/>
+            </svg>
+            <span class="car-model-tag">Maruti Suzuki Ertiga</span>
           </div>
-          <div class="fleet-body">
-            <div class="fleet-title-row">
-              <h3 class="fleet-title">Maruti Suzuki Ertiga</h3>
+          <div class="fleet-card-body">
+            <h3 class="fleet-card-title">Maruti Suzuki Ertiga</h3>
+            <p class="fleet-card-sub">Economical 7-seater family MPV for budget-friendly intercity &amp; group travels.</p>
+            <div class="fleet-specs-grid">
+              <div class="spec-item">👥 7 Passengers</div>
+              <div class="spec-item">⛽ Petrol / CNG</div>
+              <div class="spec-item">🧳 2 Medium Bags</div>
+              <div class="spec-item">❄️ Rear AC Vents</div>
             </div>
-            <p class="fleet-sub">Economical 7-seater family MPV for budget outstation &amp; local group trips</p>
-
-            <div class="fleet-specs">
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M17 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M5 16V6a1 1 0 0 1 1-1h6l4 4h2a1 1 0 0 1 1 1v6"/></svg> 7 Seats</span>
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6Z"/></svg> Petrol/CNG</span>
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg> Chauffeured</span>
-            </div>
-
-            <div class="fleet-footer">
-              <div class="price-tag">
-                <small>Starting from</small>
-                <b>₹3,200 <span style="font-size:13px;color:var(--text-muted);font-weight:400">/day</span></b>
+            <div class="fleet-card-footer">
+              <div class="price-box">
+                <small>Rate per day</small>
+                <b>₹3,200</b>
               </div>
-              <button class="btn btn-emerald btn-sm" onclick="openBookingModal('Maruti Ertiga')">Book Car</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal('Maruti Suzuki Ertiga')">Book Vehicle</button>
             </div>
           </div>
         </div>
 
-        <!-- VEHICLE 3: TOYOTA INNOVA HYCROSS -->
-        <div class="fleet-card reveal" data-category="suv luxury chauffeur">
-          <div class="fleet-img-wrap">
-            <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=700&q=80" alt="Toyota Innova Hycross">
+        <!-- CAR 3: TOYOTA INNOVA HYCROSS -->
+        <div class="fleet-card" data-category="mpv luxury">
+          <div class="card-visual-header">
+            <span class="card-badge-top">Hybrid VIP</span>
+            <svg class="car-illustration-svg" viewBox="0 0 160 80">
+              <path d="M15 50 L35 30 L80 24 L128 27 L148 50 L152 58 L10 58 Z" fill="#059669" opacity="0.9"/>
+              <path d="M40 32 L77 26 L77 44 L32 44 Z" fill="#FFFFFF" opacity="0.85"/>
+              <path d="M82 26 L122 28 L116 44 L82 44 Z" fill="#FFFFFF" opacity="0.85"/>
+              <circle cx="38" cy="58" r="10" fill="#0F172A"/>
+              <circle cx="38" cy="58" r="4" fill="#CBD5E1"/>
+              <circle cx="122" cy="58" r="10" fill="#0F172A"/>
+              <circle cx="122" cy="58" r="4" fill="#CBD5E1"/>
+            </svg>
+            <span class="car-model-tag">Toyota Innova Hycross</span>
           </div>
-          <div class="fleet-body">
-            <div class="fleet-title-row">
-              <h3 class="fleet-title">Toyota Innova Hycross</h3>
+          <div class="fleet-card-body">
+            <h3 class="fleet-card-title">Toyota Innova Hycross</h3>
+            <p class="fleet-card-sub">Ultra-quiet hybrid cabin with Ottoman captain seats &amp; panoramic sunroof.</p>
+            <div class="fleet-specs-grid">
+              <div class="spec-item">👥 7 Captain Seats</div>
+              <div class="spec-item">⚡ Strong Hybrid</div>
+              <div class="spec-item">🧳 3 Big Bags</div>
+              <div class="spec-item">⚙️ Automatic</div>
             </div>
-            <p class="fleet-sub">Ultra-quiet hybrid cabin featuring Ottoman captain seats &amp; panoramic sunroof</p>
-
-            <div class="fleet-specs">
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M17 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M5 16V6a1 1 0 0 1 1-1h6l4 4h2a1 1 0 0 1 1 1v6"/></svg> 7 Captain Seats</span>
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6Z"/></svg> Strong Hybrid</span>
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> Automatic</span>
-            </div>
-
-            <div class="fleet-footer">
+            <div class="fleet-card-footer">
               <div class="price-tag">
-                <small>Starting from</small>
-                <b>₹5,400 <span style="font-size:13px;color:var(--text-muted);font-weight:400">/day</span></b>
+                <small>Rate per day</small>
+                <b>₹5,400</b>
               </div>
-              <button class="btn btn-emerald btn-sm" onclick="openBookingModal('Toyota Innova Hycross')">Book Car</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal('Toyota Innova Hycross')">Book Vehicle</button>
             </div>
           </div>
         </div>
 
-        <!-- VEHICLE 4: HYUNDAI VERNA -->
-        <div class="fleet-card reveal" data-category="sedan chauffeur self-drive">
-          <div class="fleet-img-wrap">
-            <span class="fleet-tag-pop">Executive Sedan</span>
-            <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&w=700&q=80" alt="Hyundai Verna">
+        <!-- CAR 4: HYUNDAI VERNA -->
+        <div class="fleet-card" data-category="sedan">
+          <div class="card-visual-header">
+            <span class="card-badge-top">Executive Sedan</span>
+            <svg class="car-illustration-svg" viewBox="0 0 160 80">
+              <path d="M20 52 L42 38 L80 34 L120 36 L140 52 L145 58 L15 58 Z" fill="#475569" opacity="0.9"/>
+              <path d="M46 40 L78 36 L78 47 L38 47 Z" fill="#FFFFFF" opacity="0.8"/>
+              <path d="M82 36 L116 38 L110 47 L82 47 Z" fill="#FFFFFF" opacity="0.8"/>
+              <circle cx="40" cy="58" r="9" fill="#0F172A"/>
+              <circle cx="40" cy="58" r="4" fill="#CBD5E1"/>
+              <circle cx="118" cy="58" r="9" fill="#0F172A"/>
+              <circle cx="118" cy="58" r="4" fill="#CBD5E1"/>
+            </svg>
+            <span class="car-model-tag">Hyundai Verna</span>
           </div>
-          <div class="fleet-body">
-            <div class="fleet-title-row">
-              <h3 class="fleet-title">Hyundai Verna</h3>
+          <div class="fleet-card-body">
+            <h3 class="fleet-card-title">Hyundai Verna</h3>
+            <p class="fleet-card-sub">Sleek mid-size sedan with premium rear legroom &amp; refined highway ride.</p>
+            <div class="fleet-specs-grid">
+              <div class="spec-item">👥 4 Passengers</div>
+              <div class="spec-item">⛽ Petrol Engine</div>
+              <div class="spec-item">🧳 2 Big Bags</div>
+              <div class="spec-item">⚙️ Auto / Manual</div>
             </div>
-            <p class="fleet-sub">Stylish mid-size sedan with comfortable rear seat legroom &amp; smooth highway power</p>
-
-            <div class="fleet-specs">
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M17 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M5 16V6a1 1 0 0 1 1-1h6l4 4h2a1 1 0 0 1 1 1v6"/></svg> 4 Seats</span>
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6Z"/></svg> Petrol</span>
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> Auto/Manual</span>
-            </div>
-
-            <div class="fleet-footer">
-              <div class="price-tag">
-                <small>Starting from</small>
-                <b>₹3,000 <span style="font-size:13px;color:var(--text-muted);font-weight:400">/day</span></b>
+            <div class="fleet-card-footer">
+              <div class="price-box">
+                <small>Rate per day</small>
+                <b>₹3,000</b>
               </div>
-              <button class="btn btn-emerald btn-sm" onclick="openBookingModal('Hyundai Verna')">Book Car</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal('Hyundai Verna')">Book Vehicle</button>
             </div>
           </div>
         </div>
 
-        <!-- VEHICLE 5: MARUTI SUZUKI DZIRE -->
-        <div class="fleet-card reveal" data-category="sedan chauffeur self-drive">
-          <div class="fleet-img-wrap">
-            <span class="fleet-tag-pop">Value Sedan</span>
-            <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=700&q=80" alt="Maruti Suzuki Dzire">
+        <!-- CAR 5: MARUTI SUZUKI DZIRE -->
+        <div class="fleet-card" data-category="sedan">
+          <div class="card-visual-header">
+            <span class="card-badge-top">Value Sedan</span>
+            <svg class="car-illustration-svg" viewBox="0 0 160 80">
+              <path d="M22 52 L44 40 L78 36 L118 38 L138 52 L142 58 L18 58 Z" fill="#64748B" opacity="0.85"/>
+              <path d="M47 42 L76 38 L76 47 L40 47 Z" fill="#FFFFFF" opacity="0.8"/>
+              <path d="M80 38 L114 40 L108 47 L80 47 Z" fill="#FFFFFF" opacity="0.8"/>
+              <circle cx="42" cy="58" r="8.5" fill="#0F172A"/>
+              <circle cx="42" cy="58" r="3.5" fill="#CBD5E1"/>
+              <circle cx="116" cy="58" r="8.5" fill="#0F172A"/>
+              <circle cx="116" cy="58" r="3.5" fill="#CBD5E1"/>
+            </svg>
+            <span class="car-model-tag">Maruti Suzuki Dzire</span>
           </div>
-          <div class="fleet-body">
-            <div class="fleet-title-row">
-              <h3 class="fleet-title">Maruti Suzuki Dzire</h3>
+          <div class="fleet-card-body">
+            <h3 class="fleet-card-title">Maruti Suzuki Dzire</h3>
+            <p class="fleet-card-sub">India's most reliable compact sedan — comfortable, AC &amp; highly economical.</p>
+            <div class="fleet-specs-grid">
+              <div class="spec-item">👥 4 Passengers</div>
+              <div class="spec-item">⛽ Petrol / CNG</div>
+              <div class="spec-item">🧳 2 Medium Bags</div>
+              <div class="spec-item">❄️ Clean AC</div>
             </div>
-            <p class="fleet-sub">India's favorite compact sedan — comfortable, air-conditioned &amp; economical</p>
-
-            <div class="fleet-specs">
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M17 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M5 16V6a1 1 0 0 1 1-1h6l4 4h2a1 1 0 0 1 1 1v6"/></svg> 4 Seats</span>
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6Z"/></svg> Petrol/CNG</span>
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg> Self-Drive / Driver</span>
-            </div>
-
-            <div class="fleet-footer">
-              <div class="price-tag">
-                <small>Starting from</small>
-                <b>₹2,200 <span style="font-size:13px;color:var(--text-muted);font-weight:400">/day</span></b>
+            <div class="fleet-card-footer">
+              <div class="price-box">
+                <small>Rate per day</small>
+                <b>₹2,200</b>
               </div>
-              <button class="btn btn-emerald btn-sm" onclick="openBookingModal('Maruti Dzire')">Book Car</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal('Maruti Suzuki Dzire')">Book Vehicle</button>
             </div>
           </div>
         </div>
 
-        <!-- VEHICLE 6: HYUNDAI AURA -->
-        <div class="fleet-card reveal" data-category="sedan chauffeur self-drive">
-          <div class="fleet-img-wrap">
-            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=700&q=80" alt="Hyundai Aura">
+        <!-- CAR 6: HYUNDAI AURA -->
+        <div class="fleet-card" data-category="sedan">
+          <div class="card-visual-header">
+            <span class="card-badge-top">City Sedan</span>
+            <svg class="car-illustration-svg" viewBox="0 0 160 80">
+              <path d="M22 52 L44 40 L78 36 L118 38 L138 52 L142 58 L18 58 Z" fill="#0284C7" opacity="0.85"/>
+              <path d="M47 42 L76 38 L76 47 L40 47 Z" fill="#FFFFFF" opacity="0.8"/>
+              <path d="M80 38 L114 40 L108 47 L80 47 Z" fill="#FFFFFF" opacity="0.8"/>
+              <circle cx="42" cy="58" r="8.5" fill="#0F172A"/>
+              <circle cx="42" cy="58" r="3.5" fill="#CBD5E1"/>
+              <circle cx="116" cy="58" r="8.5" fill="#0F172A"/>
+              <circle cx="116" cy="58" r="3.5" fill="#CBD5E1"/>
+            </svg>
+            <span class="car-model-tag">Hyundai Aura</span>
           </div>
-          <div class="fleet-body">
-            <div class="fleet-title-row">
-              <h3 class="fleet-title">Hyundai Aura</h3>
+          <div class="fleet-card-body">
+            <h3 class="fleet-card-title">Hyundai Aura</h3>
+            <p class="fleet-card-sub">Smooth &amp; quiet compact sedan tailored for city errands &amp; airport drops.</p>
+            <div class="fleet-specs-grid">
+              <div class="spec-item">👥 4 Passengers</div>
+              <div class="spec-item">⛽ Petrol / CNG</div>
+              <div class="spec-item">🧳 2 Medium Bags</div>
+              <div class="spec-item">⚙️ Manual</div>
             </div>
-            <p class="fleet-sub">Smooth &amp; quiet compact sedan tailored for city errands &amp; airport transfers</p>
-
-            <div class="fleet-specs">
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M17 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M5 16V6a1 1 0 0 1 1-1h6l4 4h2a1 1 0 0 1 1 1v6"/></svg> 4 Seats</span>
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6Z"/></svg> Petrol/CNG</span>
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> Manual</span>
-            </div>
-
-            <div class="fleet-footer">
-              <div class="price-tag">
-                <small>Starting from</small>
-                <b>₹2,200 <span style="font-size:13px;color:var(--text-muted);font-weight:400">/day</span></b>
+            <div class="fleet-card-footer">
+              <div class="price-box">
+                <small>Rate per day</small>
+                <b>₹2,200</b>
               </div>
-              <button class="btn btn-emerald btn-sm" onclick="openBookingModal('Hyundai Aura')">Book Car</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal('Hyundai Aura')">Book Vehicle</button>
             </div>
           </div>
         </div>
 
-        <!-- VEHICLE 7: MARUTI SUZUKI SWIFT -->
-        <div class="fleet-card reveal" data-category="self-drive">
-          <div class="fleet-img-wrap">
-            <span class="fleet-tag-pop">Economy Pick</span>
-            <img src="https://images.unsplash.com/photo-1641430141849-cdc9073fd3d7?auto=format&fit=crop&w=700&q=80" alt="Maruti Swift">
+        <!-- CAR 7: MARUTI SUZUKI SWIFT -->
+        <div class="fleet-card" data-category="selfdrive">
+          <div class="card-visual-header">
+            <span class="card-badge-top">Self Drive Pick</span>
+            <svg class="car-illustration-svg" viewBox="0 0 160 80">
+              <path d="M25 52 L48 42 L78 38 L112 40 L132 52 L136 58 L20 58 Z" fill="#DC2626" opacity="0.85"/>
+              <path d="M50 43 L76 40 L76 47 L44 47 Z" fill="#FFFFFF" opacity="0.8"/>
+              <path d="M80 40 L108 42 L104 47 L80 47 Z" fill="#FFFFFF" opacity="0.8"/>
+              <circle cx="44" cy="58" r="8" fill="#0F172A"/>
+              <circle cx="44" cy="58" r="3" fill="#CBD5E1"/>
+              <circle cx="112" cy="58" r="8" fill="#0F172A"/>
+              <circle cx="112" cy="58" r="3" fill="#CBD5E1"/>
+            </svg>
+            <span class="car-model-tag">Maruti Suzuki Swift</span>
           </div>
-          <div class="fleet-body">
-            <div class="fleet-title-row">
-              <h3 class="fleet-title">Maruti Suzuki Swift</h3>
+          <div class="fleet-card-body">
+            <h3 class="fleet-card-title">Maruti Suzuki Swift</h3>
+            <p class="fleet-card-sub">Agile hatchback ideal for self-drive city navigation &amp; fuel economy.</p>
+            <div class="fleet-specs-grid">
+              <div class="spec-item">👥 4 Passengers</div>
+              <div class="spec-item">⛽ Petrol Engine</div>
+              <div class="spec-item">🧳 1 Small Bag</div>
+              <div class="spec-item">🔑 Self Drive</div>
             </div>
-            <p class="fleet-sub">Agile hatchback ideal for self-drive city navigation &amp; economical fuel consumption</p>
-
-            <div class="fleet-specs">
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M17 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M5 16V6a1 1 0 0 1 1-1h6l4 4h2a1 1 0 0 1 1 1v6"/></svg> 4 Seats</span>
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6Z"/></svg> Petrol</span>
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg> Self-Drive</span>
-            </div>
-
-            <div class="fleet-footer">
-              <div class="price-tag">
-                <small>Starting from</small>
-                <b>₹1,800 <span style="font-size:13px;color:var(--text-muted);font-weight:400">/day</span></b>
+            <div class="fleet-card-footer">
+              <div class="price-box">
+                <small>Rate per day</small>
+                <b>₹1,800</b>
               </div>
-              <button class="btn btn-emerald btn-sm" onclick="openBookingModal('Maruti Swift')">Book Car</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal('Maruti Suzuki Swift')">Book Vehicle</button>
             </div>
           </div>
         </div>
 
-        <!-- VEHICLE 8: BMW 5 SERIES -->
-        <div class="fleet-card reveal" data-category="luxury chauffeur">
-          <div class="fleet-img-wrap">
-            <span class="fleet-tag-pop">Executive Luxury</span>
-            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=700&q=80" alt="BMW 5 Series">
+        <!-- CAR 8: BMW 5 SERIES -->
+        <div class="fleet-card" data-category="luxury">
+          <div class="card-visual-header" style="background:linear-gradient(135deg, #1E293B 0%, #0F172A 100%);">
+            <span class="card-badge-top" style="background:var(--primary);color:#FFF">VIP Luxury</span>
+            <svg class="car-illustration-svg" viewBox="0 0 160 80">
+              <path d="M18 52 L40 38 L80 34 L122 36 L142 52 L147 58 L12 58 Z" fill="#FFFFFF" opacity="0.9"/>
+              <path d="M44 40 L78 36 L78 47 L36 47 Z" fill="#0F172A" opacity="0.8"/>
+              <path d="M82 36 L118 38 L112 47 L82 47 Z" fill="#0F172A" opacity="0.8"/>
+              <circle cx="38" cy="58" r="9" fill="#E2B859"/>
+              <circle cx="120" cy="58" r="9" fill="#E2B859"/>
+            </svg>
+            <span class="car-model-tag" style="color:#FFF">BMW 5 Series Chauffeur</span>
           </div>
-          <div class="fleet-body">
-            <div class="fleet-title-row">
-              <h3 class="fleet-title">BMW 5 Series</h3>
+          <div class="fleet-card-body">
+            <h3 class="fleet-card-title">BMW 5 Series</h3>
+            <p class="fleet-card-sub">Premier German luxury sedan for corporate delegations, VIP transfers &amp; weddings.</p>
+            <div class="fleet-specs-grid">
+              <div class="spec-item">👥 4 Passengers</div>
+              <div class="spec-item">⛽ Turbo Petrol</div>
+              <div class="spec-item">🧳 3 Big Bags</div>
+              <div class="spec-item">👨‍✈️ Uniformed Chauffeur</div>
             </div>
-            <p class="fleet-sub">Premier luxury sedan for corporate delegations, VIP transfers &amp; weddings</p>
-
-            <div class="fleet-specs">
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M17 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M5 16V6a1 1 0 0 1 1-1h6l4 4h2a1 1 0 0 1 1 1v6"/></svg> 4 Seats</span>
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6Z"/></svg> Petrol/Diesel</span>
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg> Uniformed Driver</span>
-            </div>
-
-            <div class="fleet-footer">
-              <div class="price-tag">
-                <small>Starting from</small>
-                <b>₹9,500 <span style="font-size:13px;color:var(--text-muted);font-weight:400">/day</span></b>
+            <div class="fleet-card-footer">
+              <div class="price-box">
+                <small>Rate per day</small>
+                <b>₹9,500</b>
               </div>
-              <button class="btn btn-emerald btn-sm" onclick="openBookingModal('BMW 5 Series')">Book Car</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal('BMW 5 Series')">Book Vehicle</button>
             </div>
           </div>
         </div>
 
-        <!-- VEHICLE 9: AUDI A6 -->
-        <div class="fleet-card reveal" data-category="luxury chauffeur">
-          <div class="fleet-img-wrap">
-            <span class="fleet-tag-pop" style="background:#0F172A;color:#FFF">VIP Luxury</span>
-            <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=700&q=80" alt="Audi A6">
+        <!-- CAR 9: AUDI A6 -->
+        <div class="fleet-card" data-category="luxury">
+          <div class="card-visual-header" style="background:linear-gradient(135deg, #1E293B 0%, #0F172A 100%);">
+            <span class="card-badge-top" style="background:var(--gold-dark);color:#FFF">Prestige Class</span>
+            <svg class="car-illustration-svg" viewBox="0 0 160 80">
+              <path d="M18 52 L40 38 L80 34 L122 36 L142 52 L147 58 L12 58 Z" fill="#E2E8F0" opacity="0.9"/>
+              <path d="M44 40 L78 36 L78 47 L36 47 Z" fill="#0F172A" opacity="0.8"/>
+              <path d="M82 36 L118 38 L112 47 L82 47 Z" fill="#0F172A" opacity="0.8"/>
+              <circle cx="38" cy="58" r="9" fill="#CBD5E1"/>
+              <circle cx="120" cy="58" r="9" fill="#CBD5E1"/>
+            </svg>
+            <span class="car-model-tag" style="color:#FFF">Audi A6 Luxury</span>
           </div>
-          <div class="fleet-body">
-            <div class="fleet-title-row">
-              <h3 class="fleet-title">Audi A6</h3>
+          <div class="fleet-card-body">
+            <h3 class="fleet-card-title">Audi A6</h3>
+            <p class="fleet-card-sub">Prestige executive luxury sedan with soundproofed quiet cabin &amp; air suspension.</p>
+            <div class="fleet-specs-grid">
+              <div class="spec-item">👥 4 Passengers</div>
+              <div class="spec-item">⛽ TFSI Petrol</div>
+              <div class="spec-item">🧳 3 Big Bags</div>
+              <div class="spec-item">⚙️ Automatic</div>
             </div>
-            <p class="fleet-sub">Prestige German luxury sedan with supreme ride comfort &amp; soundproofing</p>
-
-            <div class="fleet-specs">
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M17 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M5 16V6a1 1 0 0 1 1-1h6l4 4h2a1 1 0 0 1 1 1v6"/></svg> 4 Seats</span>
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6Z"/></svg> TFSI Petrol</span>
-              <span class="spec-pill"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> Automatic</span>
-            </div>
-
-            <div class="fleet-footer">
-              <div class="price-tag">
-                <small>Starting from</small>
-                <b>₹8,800 <span style="font-size:13px;color:var(--text-muted);font-weight:400">/day</span></b>
+            <div class="fleet-card-footer">
+              <div class="price-box">
+                <small>Rate per day</small>
+                <b>₹8,800</b>
               </div>
-              <button class="btn btn-emerald btn-sm" onclick="openBookingModal('Audi A6')">Book Car</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal('Audi A6')">Book Vehicle</button>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- FLEET YARD REAL CAR PHOTOS (REAL TOYOTA INNOVA CRYSTA & MARUTI ERTIGA) -->
-      <div class="yard-gallery">
-        <div class="yard-item reveal" onclick="openLightbox('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=85')">
-          <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=900&q=80" alt="Toyota Innova Crysta Outstation Dispatch">
-          <div class="yard-caption">🚘 Toyota Innova Crysta • Indore Hub Dispatch</div>
-        </div>
-        <div class="yard-item reveal" onclick="openLightbox('https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=85')">
-          <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=900&q=80" alt="Maruti Suzuki Ertiga Outstation Dispatch">
-          <div class="yard-caption">🚘 Maruti Suzuki Ertiga • Morning Outstation Dispatch</div>
-        </div>
       </div>
     </div>
   </section>
 
   <!-- INSTANT TRIP FARE ESTIMATOR WIDGET -->
-  <section class="section-pad section-pad-alt" id="estimator">
+  <section class="section-pad estimator-section" id="estimator">
     <div class="wrap">
-      <div class="section-head center reveal">
-        <div class="badge">Fare Calculator</div>
-        <h2>Instant Trip Fare Estimator</h2>
-        <p>Select your vehicle, service mode, and travel duration for an immediate price estimate.</p>
+      <div class="section-head">
+        <div class="hero-badge">Transparent Billing</div>
+        <h2>Instant Fare Calculator</h2>
+        <p>Select vehicle model, trip type &amp; travel days for an instant transparent rate estimate.</p>
       </div>
 
-      <div class="estimator-card reveal">
+      <div class="estimator-card">
         <div class="estimator-grid">
           <div>
             <div class="form-group">
               <label for="estVehicle">Choose Vehicle</label>
-              <select id="estVehicle" class="form-control" onchange="calculateFare()">
+              <select id="estVehicle" class="form-control" onchange="calculateRate()">
                 <option value="4200" selected>Toyota Innova Crysta (₹4,200/day)</option>
                 <option value="3200">Maruti Suzuki Ertiga (₹3,200/day)</option>
                 <option value="5400">Toyota Innova Hycross (₹5,400/day)</option>
@@ -1685,16 +1044,16 @@
                 <option value="2200">Maruti Suzuki Dzire (₹2,200/day)</option>
                 <option value="2200">Hyundai Aura (₹2,200/day)</option>
                 <option value="1800">Maruti Suzuki Swift (₹1,800/day)</option>
-                <option value="8800">Audi A6 Luxury Sedan (₹8,800/day)</option>
+                <option value="8800">Audi A6 Luxury (₹8,800/day)</option>
                 <option value="9500">BMW 5 Series Chauffeur (₹9,500/day)</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="estTripType">Trip Requirement</label>
-              <select id="estTripType" class="form-control" onchange="calculateFare()">
+              <label for="estType">Trip Requirement</label>
+              <select id="estType" class="form-control" onchange="calculateRate()">
+                <option value="outstation" selected>Outstation Intercity Drive</option>
                 <option value="local">Local City Package (8 Hours / 80 Kms)</option>
-                <option value="outstation" selected>Outstation / Multi-City Drive</option>
                 <option value="airport">Airport Pickup &amp; Drop Transfer</option>
                 <option value="safari">Bandhavgarh Safari Combo Transfer</option>
               </select>
@@ -1702,46 +1061,40 @@
 
             <div class="form-group">
               <label for="estDays">Trip Duration (Days)</label>
-              <input type="number" id="estDays" class="form-control" value="2" min="1" max="15" onchange="calculateFare()" oninput="calculateFare()">
+              <input type="number" id="estDays" class="form-control" value="2" min="1" max="15" onchange="calculateRate()" oninput="calculateRate()">
             </div>
           </div>
 
-          <div class="estimator-result">
+          <div class="calc-summary">
             <div>
-              <div class="result-header">
-                <h4>Estimate Summary</h4>
-                <p style="font-size:12.5px;color:var(--text-muted);margin-top:2px">Includes sanitized car, driver allowance &amp; insurance</p>
+              <h4 style="font-size:18px;color:var(--primary);border-bottom:1px solid var(--border-color);padding-bottom:12px;margin-bottom:16px">Rate Breakdown</h4>
+              <div class="calc-row">
+                <span>Selected Vehicle:</span>
+                <b id="resModel" style="color:var(--text-heading)">Toyota Innova Crysta</b>
               </div>
-
-              <div class="calc-breakdown">
-                <div class="calc-row">
-                  <span>Selected Model</span>
-                  <span id="resVehicleName" style="color:var(--text-heading);font-weight:700">Innova Crysta</span>
-                </div>
-                <div class="calc-row">
-                  <span>Rate per Day</span>
-                  <span id="resRateDay">₹4,200</span>
-                </div>
-                <div class="calc-row">
-                  <span>Duration</span>
-                  <span id="resDaysCount">2 Days</span>
-                </div>
-                <div class="calc-row">
-                  <span>Estimated Taxes &amp; Allowance</span>
-                  <span style="color:var(--emerald-primary);font-weight:600">Included</span>
-                </div>
+              <div class="calc-row">
+                <span>Daily Rate:</span>
+                <span id="resRate">₹4,200 / day</span>
+              </div>
+              <div class="calc-row">
+                <span>Duration:</span>
+                <span id="resDays">2 Days</span>
+              </div>
+              <div class="calc-row">
+                <span>Driver Allowance &amp; Insurance:</span>
+                <span style="color:var(--primary);font-weight:700">Included</span>
               </div>
             </div>
 
             <div class="calc-total">
               <div>
-                <span>Estimated Total:</span>
-                <p style="font-size:11px;color:var(--text-dim)">Excludes Tolls &amp; Parking</p>
+                <span style="font-size:13px;font-weight:700;color:var(--text-heading)">Estimated Total:</span>
+                <p style="font-size:11px;color:var(--text-muted)">Excludes State Tolls &amp; Parking</p>
               </div>
-              <b id="resTotalAmount">₹8,400</b>
+              <b id="resTotal">₹8,400</b>
             </div>
 
-            <button class="btn btn-emerald btn-block" style="margin-top:16px" onclick="bookEstimatedTrip()">
+            <button class="btn btn-wa btn-block" style="margin-top:16px" onclick="bookEstimatedFare()">
               Book This Calculation on WhatsApp
             </button>
           </div>
@@ -1753,72 +1106,44 @@
   <!-- BANDHAVGARH SAFARI EXPLORER -->
   <section class="section-pad" id="safari">
     <div class="wrap">
-      <div class="safari-grid">
-        <div class="reveal">
-          <div class="badge">Bandhavgarh National Park</div>
-          <h2 style="margin-top:16px">India's Highest Tiger Density Reserve</h2>
-          <p style="color:var(--text-muted);font-size:16px;line-height:1.7;margin-top:16px">
-            Set in Umaria surrounding an ancient hill fort, Bandhavgarh holds one of India's most famous wild Bengal tiger populations. Operating October to June, Vyom Travels organizes safari permits, gypsy slots, certified naturalists, and seamless car transfers from Indore &amp; Jabalpur.
-          </p>
-
-          <div style="margin-top:24px;display:flex;gap:12px">
-            <button class="btn btn-emerald" onclick="openBookingModal('Bandhavgarh Safari Request')">
-              Book Safari Gate Permit
-            </button>
-            <a href="#packages" class="btn btn-outline">Explore Itineraries</a>
-          </div>
-        </div>
-
-        <div class="safari-gallery-stack reveal">
-          <div class="safari-img-tall">
-            <img src="https://images.unsplash.com/photo-1496222994535-5f1f76905ea4?auto=format&fit=crop&w=900&q=80" alt="Royal Bengal Tiger Bandhavgarh">
-          </div>
-          <div class="safari-img-stack">
-            <div class="safari-img-short">
-              <img src="https://images.unsplash.com/photo-1554380726-5bd6b17b42e5?auto=format&fit=crop&w=700&q=80" alt="Safari Gypsy Drive Bandhavgarh">
-            </div>
-            <div class="safari-img-short">
-              <img src="https://images.unsplash.com/photo-1718546076303-2e8a85c07119?auto=format&fit=crop&w=700&q=80" alt="Tiger Sighting in Forest">
-            </div>
-          </div>
-        </div>
+      <div class="section-head">
+        <div class="hero-badge">Wildlife Expeditions</div>
+        <h2>Bandhavgarh Tiger Safari Guide</h2>
+        <p>Direct forest permit handling, certified naturalist guides, &amp; comfortable car transfers.</p>
       </div>
 
-      <!-- ZONE EXPLORER TABS -->
-      <div class="zone-container reveal">
-        <div class="section-head center" style="margin-bottom:24px">
-          <h3>Interactive Safari Zone Guide</h3>
-          <p>Click below to inspect gates, terrain, and tiger sighting odds.</p>
-        </div>
-
-        <div class="zone-tabs">
-          <button class="zone-tab-btn active" onclick="switchZone('tala', this)">Gate 1: Tala Zone</button>
-          <button class="zone-tab-btn" onclick="switchZone('magadhi', this)">Gate 2: Magadhi Zone</button>
-          <button class="zone-tab-btn" onclick="switchZone('khitauli', this)">Gate 3: Khitauli Zone</button>
-          <button class="zone-tab-btn" onclick="switchZone('buffer', this)">Buffer Zones</button>
-        </div>
-
-        <div class="zone-content-box" id="zoneContent">
-          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px">
-            <h4 id="zoneTitle" style="font-size:22px;color:var(--emerald-primary)">Gate 1: Tala Zone (Premium Core)</h4>
-            <span id="zoneOdds" class="badge">Highest Tiger Sighting Odds</span>
+      <div class="safari-box">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+          <div>
+            <h3 style="font-size:24px;color:var(--primary)">Official Gate Permits &amp; Gypsy Booking</h3>
+            <p style="color:var(--text-muted);font-size:14px;margin-top:4px">Operating October 1st to June 30th every year in Umaria District, MP.</p>
           </div>
-          <p id="zoneDesc" style="color:var(--text-main);margin-top:12px;font-size:15px;line-height:1.7">
-            The historic heart of Bandhavgarh featuring fort ruins, ancient caves, and Charganga stream. Tala holds the lowest vehicle permit cap per session, offering the most coveted sighting tracks.
-          </p>
+          <button class="btn btn-primary" onclick="openModal('Bandhavgarh Safari Request')">Request Safari Gate Pass</button>
+        </div>
 
-          <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:16px;margin-top:20px;padding-top:16px;border-top:1px solid var(--border-color)">
+        <div class="zone-tabs-line">
+          <button class="zone-btn active" onclick="switchZone('tala', this)">Gate 1: Tala (Core)</button>
+          <button class="zone-btn" onclick="switchZone('magadhi', this)">Gate 2: Magadhi (Core)</button>
+          <button class="zone-btn" onclick="switchZone('khitauli', this)">Gate 3: Khitauli (Core)</button>
+          <button class="zone-tab-btn zone-btn" onclick="switchZone('buffer', this)">Buffer Gates</button>
+        </div>
+
+        <div style="background:var(--bg-surface);border-radius:var(--radius-lg);padding:24px;margin-top:20px" id="zoneDisplay">
+          <h4 id="zTitle" style="font-size:20px;color:var(--text-heading)">Gate 1: Tala Zone (Premium Core)</h4>
+          <p id="zDesc" style="color:var(--text-body);margin-top:8px;font-size:14.5px">Historic zone featuring ancient hill fort, caves, and Charganga stream. Tala holds the lowest vehicle permit cap per session, offering top tiger sighting tracks.</p>
+          
+          <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:16px;margin-top:16px;padding-top:16px;border-top:1px solid var(--border-color)">
             <div>
-              <small style="color:var(--text-muted);font-size:11px;text-transform:uppercase">Best Sighting Months</small>
-              <p id="zoneMonths" style="font-weight:700;font-size:14px;color:var(--text-heading)">March – June</p>
+              <small style="font-size:11px;color:var(--text-muted);text-transform:uppercase">Best Months</small>
+              <p id="zMonths" style="font-weight:700;font-size:14px">March – June</p>
             </div>
             <div>
-              <small style="color:var(--text-muted);font-size:11px;text-transform:uppercase">Key Terrain</small>
-              <p id="zoneTerrain" style="font-weight:700;font-size:14px;color:var(--text-heading)">Sal Forest &amp; Rocky Hills</p>
+              <small style="font-size:11px;color:var(--text-muted);text-transform:uppercase">Terrain</small>
+              <p id="zTerrain" style="font-weight:700;font-size:14px">Sal Forest &amp; Rocky Hills</p>
             </div>
             <div>
-              <small style="color:var(--text-muted);font-size:11px;text-transform:uppercase">Permit Turnaround</small>
-              <p id="zoneTurnaround" style="font-weight:700;font-size:14px;color:var(--emerald-primary)">24 – 48 Hours</p>
+              <small style="font-size:11px;color:var(--text-muted);text-transform:uppercase">Turnaround</small>
+              <p id="zTurnaround" style="font-weight:700;font-size:14px;color:var(--primary)">24 – 48 Hours</p>
             </div>
           </div>
         </div>
@@ -1826,209 +1151,53 @@
     </div>
   </section>
 
-  <!-- SAFARI & TRAVEL PACKAGES -->
-  <section class="section-pad section-pad-alt" id="packages">
+  <!-- PACKAGES -->
+  <section class="section-pad estimator-section" id="packages">
     <div class="wrap">
-      <div class="section-head center reveal">
-        <div class="badge">Tour Packages</div>
-        <h2>Curated Safari &amp; Travel Packages</h2>
-        <p>Complete end-to-end itineraries covering luxury transfers, resort stays, and confirmed gate permits.</p>
+      <div class="section-head">
+        <div class="hero-badge">Curated Itineraries</div>
+        <h2>Safari &amp; Travel Packages</h2>
+        <p>End-to-end travel packages covering resort stay, meals, chauffeured Innova transfers, and core safari passes.</p>
       </div>
 
       <div class="pack-grid">
-        <!-- PACKAGE 1 -->
-        <div class="pack-card reveal">
-          <small style="color:var(--emerald-primary);font-weight:700;letter-spacing:0.05em;text-transform:uppercase">Single Day</small>
-          <h3 class="pack-title">Sunrise Gate Pass</h3>
-          <div class="pack-price">
-            <b>₹3,800</b> <span>/ person</span>
-          </div>
-
-          <ul class="pack-features">
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2.5" stroke-linecap="round"/></svg> 1 Morning Core Safari Drive</li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2.5" stroke-linecap="round"/></svg> Confirmed Forest Permit &amp; Entry</li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2.5" stroke-linecap="round"/></svg> Certified Naturalist Guide Included</li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2.5" stroke-linecap="round"/></svg> Shared or Private Gypsy Option</li>
+        <div class="pack-card">
+          <span style="color:var(--primary);font-size:12px;font-weight:700;text-transform:uppercase">Single Day</span>
+          <h3 class="pack-title">Sunrise Safari Gate Pass</h3>
+          <div class="pack-price">₹3,800 <span style="font-size:14px;font-weight:400;color:var(--text-muted)">/ person</span></div>
+          <ul class="pack-list">
+            <li>1 Morning Core Safari Drive</li>
+            <li>Confirmed Forest Permit &amp; Entry</li>
+            <li>Certified Naturalist Guide Included</li>
+            <li>Shared or Private Gypsy Option</li>
           </ul>
-
-          <button class="btn btn-outline btn-block" style="margin-top:auto" onclick="openBookingModal('Sunrise Gate Pass Package')">
-            Book Package
-          </button>
+          <button class="btn btn-outline btn-block" style="margin-top:auto" onclick="openModal('Sunrise Safari Pass')">Book Pass</button>
         </div>
 
-        <!-- PACKAGE 2 (FEATURED) -->
-        <div class="pack-card featured reveal">
-          <span class="pack-feat-badge">Most Popular</span>
-          <small style="color:var(--emerald-primary);font-weight:700;letter-spacing:0.05em;text-transform:uppercase">2 Nights / 3 Days</small>
+        <div class="pack-card featured">
+          <span style="color:var(--primary);font-size:12px;font-weight:700;text-transform:uppercase">2 Nights / 3 Days</span>
           <h3 class="pack-title">Two-Night Tiger Trail</h3>
-          <div class="pack-price">
-            <b>₹28,000</b> <span>/ couple</span>
-          </div>
-
-          <ul class="pack-features">
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2.5" stroke-linecap="round"/></svg> 2 Nights at Jungle Resort Partner</li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2.5" stroke-linecap="round"/></svg> 4 Core Safaris (Tala &amp; Magadhi)</li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2.5" stroke-linecap="round"/></svg> Chauffeured Innova Pickup from Jabalpur</li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2.5" stroke-linecap="round"/></svg> All Meals &amp; Naturalist Fees Included</li>
+          <div class="pack-price">₹28,000 <span style="font-size:14px;font-weight:400;color:var(--text-muted)">/ couple</span></div>
+          <ul class="pack-list">
+            <li>2 Nights Jungle Resort Stay</li>
+            <li>4 Core Safaris (Tala &amp; Magadhi)</li>
+            <li>Chauffeured Innova Pickup from Jabalpur</li>
+            <li>All Meals &amp; Naturalist Fees</li>
           </ul>
-
-          <button class="btn btn-emerald btn-block" style="margin-top:auto" onclick="openBookingModal('Two-Night Tiger Trail Package')">
-            Book Popular Package
-          </button>
+          <button class="btn btn-primary btn-block" style="margin-top:auto" onclick="openModal('Two-Night Tiger Trail')">Book Popular Package</button>
         </div>
 
-        <!-- PACKAGE 3 -->
-        <div class="pack-card reveal">
-          <small style="color:var(--emerald-primary);font-weight:700;letter-spacing:0.05em;text-transform:uppercase">3 Nights / 4 Days</small>
+        <div class="pack-card">
+          <span style="color:var(--primary);font-size:12px;font-weight:700;text-transform:uppercase">3 Nights / 4 Days</span>
           <h3 class="pack-title">The Grand Expedition</h3>
-          <div class="pack-price">
-            <b>₹52,000</b> <span>/ family</span>
-          </div>
-
-          <ul class="pack-features">
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2.5" stroke-linecap="round"/></svg> 3 Nights Luxury Cottage Stay</li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2.5" stroke-linecap="round"/></svg> 6 Safaris Covering All Core Gates</li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2.5" stroke-linecap="round"/></svg> BMW / Audi Airport Pickup &amp; Drop</li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2.5" stroke-linecap="round"/></svg> VIP Priority Permit Handling</li>
+          <div class="pack-price">₹52,000 <span style="font-size:14px;font-weight:400;color:var(--text-muted)">/ family</span></div>
+          <ul class="pack-list">
+            <li>3 Nights Luxury Cottage Stay</li>
+            <li>6 Core Safaris Across All Gates</li>
+            <li>BMW / Audi Airport Pickup &amp; Drop</li>
+            <li>VIP Priority Permit Handling</li>
           </ul>
-
-          <button class="btn btn-outline btn-block" style="margin-top:auto" onclick="openBookingModal('Grand Expedition Package')">
-            Book VIP Expedition
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE US -->
-  <section class="section-pad" id="why">
-    <div class="wrap">
-      <div class="section-head center reveal">
-        <div class="badge">Trust &amp; Quality</div>
-        <h2>Why Choose Vyom Travels</h2>
-        <p>We combine high standards of car care with direct on-ground wildlife teams in MP.</p>
-      </div>
-
-      <div class="why-grid">
-        <div class="why-card reveal">
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2L3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7l-9-5z"/><path d="M9 12l2 2 4-4"/></svg>
-          </div>
-          <h4 style="font-size:18px">Doorstep Vehicle Handover</h4>
-          <p style="color:var(--text-muted);font-size:14px;margin-top:8px">Available in Indore, Jabalpur, Bhopal &amp; Umaria directly to your home or hotel lobby.</p>
-        </div>
-
-        <div class="why-card reveal">
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.8 3.5a8.5 8.5 0 1 1 0 17 8.5 8.5 0 0 1 0-17Z"/></svg>
-          </div>
-          <h4 style="font-size:18px">100% Verified Permits</h4>
-          <p style="color:var(--text-muted);font-size:14px;margin-top:8px">Direct government forest portal permit processing with zero middleman risk.</p>
-        </div>
-
-        <div class="why-card reveal">
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M2.5 20c0-3.3 2.9-6 6.5-6s6.5 2.7 6.5 6"/></svg>
-          </div>
-          <h4 style="font-size:18px">Bilingual Naturalist Guides</h4>
-          <p style="color:var(--text-muted);font-size:14px;margin-top:8px">Certified English and Hindi wildlife experts trained in pugmark tracking.</p>
-        </div>
-
-        <div class="why-card reveal">
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24"><path d="M3 13l1.5-4.5A2 2 0 0 1 6.4 7h11.2a2 2 0 0 1 1.9 1.5L21 13v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H6v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/></svg>
-          </div>
-          <h4 style="font-size:18px">Serviced &amp; Sanitized Cars</h4>
-          <p style="color:var(--text-muted);font-size:14px;margin-top:8px">Strict 25-point mechanical inspection before every outstation or city dispatch.</p>
-        </div>
-
-        <div class="why-card reveal">
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-          </div>
-          <h4 style="font-size:18px">24/7 Road Support</h4>
-          <p style="color:var(--text-muted);font-size:14px;margin-top:8px">Dedicated helpline for instant vehicle replacement or itinerary updates during your trip.</p>
-        </div>
-
-        <div class="why-card reveal">
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg>
-          </div>
-          <h4 style="font-size:18px">Single WhatsApp Thread</h4>
-          <p style="color:var(--text-muted);font-size:14px;margin-top:8px">No app logins needed. Bookings, invoices, driver details, and gate passes in one chat.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="section-pad section-pad-alt">
-    <div class="wrap">
-      <div class="section-head center reveal">
-        <div class="badge">Client Feedback</div>
-        <h2>What Travelers Say</h2>
-        <p>Real reviews from family vacations, executive trips, and tiger safaris.</p>
-      </div>
-
-      <div class="quote-grid">
-        <div class="quote-card reveal">
-          <div class="quote-stars">
-            ★★★★★
-          </div>
-          <p class="quote-text">"Our Innova Crysta pickup from Jabalpur airport by Vyom Travels was punctual to the minute, and our Tala gate permit was printed and ready at camp."</p>
-          <div class="quote-author">
-            <div class="author-avatar">AR</div>
-            <div>
-              <div style="font-size:14px;font-weight:700;color:var(--text-heading)">Ananya Roy</div>
-              <div style="font-size:12px;color:var(--text-muted)">Mumbai</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="quote-card reveal">
-          <div class="quote-stars">
-            ★★★★★
-          </div>
-          <p class="quote-text">"Aakash Jaiswal organized three safaris across Tala &amp; Magadhi with zero hassle at the gates. Top-class service!"</p>
-          <div class="quote-author">
-            <div class="author-avatar" style="background:linear-gradient(135deg,#0D9488,#3B82F6)">RM</div>
-            <div>
-              <div style="font-size:14px;font-weight:700;color:var(--text-heading)">Rohan Mehta</div>
-              <div style="font-size:12px;color:var(--text-muted)">New Delhi</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="quote-card reveal">
-          <div class="quote-stars">
-            ★★★★★
-          </div>
-          <p class="quote-text">"Rented the Ertiga 7-seater for a family trip of seven. Exceptionally clean vehicle and very polite driver."</p>
-          <div class="quote-author">
-            <div class="author-avatar" style="background:linear-gradient(135deg,#B45309,#D4AF37)">KS</div>
-            <div>
-              <div style="font-size:14px;font-weight:700;color:var(--text-heading)">Kavya Sharma</div>
-              <div style="font-size:12px;color:var(--text-muted)">Bengaluru</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA BOX -->
-  <section class="section-pad">
-    <div class="wrap">
-      <div class="cta-box reveal">
-        <div>
-          <h2>Ready to Book Your MP Travel or Safari?</h2>
-          <p style="margin-top:8px;font-size:16px">Contact Aakash Jaiswal at Vyom Travels for instant quotes and confirmed permits.</p>
-        </div>
-        <div style="display:flex;gap:14px;flex-wrap:wrap">
-          <button class="btn btn-wa btn-lg" onclick="openBookingModal('Footer CTA')">
-            Book via WhatsApp
-          </button>
-          <a href="tel:+917869626201" class="btn btn-outline btn-lg">Call +91 78696 26201</a>
+          <button class="btn btn-outline btn-block" style="margin-top:auto" onclick="openModal('Grand Expedition')">Book Expedition</button>
         </div>
       </div>
     </div>
@@ -2040,66 +1209,48 @@
 <footer id="contact">
   <div class="wrap">
     <div class="foot-grid">
-      <div style="display:flex;flex-direction:column;gap:16px">
-        <a href="#top" class="brand-logo">
-          <div class="brand-icon">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M4 15s3-3 8-3 8 3 8 3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
-              <path d="M6 10L12 4l6 6" stroke="#FEF3C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="12" cy="16" r="2" fill="#FFFFFF"/>
-            </svg>
-          </div>
-          <div class="brand-text" style="color:#FFF">
-            VYOM<span style="color:#14B8A6">TRAVELS</span>
-          </div>
-        </a>
-        <p style="color:#94A3B8;font-size:14px;line-height:1.6;max-width:300px">
-          Executive chauffeured cars, self-drive rentals, and Bandhavgarh National Park tiger safari bookings across MP.
-        </p>
+      <div>
+        <h3 style="color:#FFF;font-size:22px;margin-bottom:12px">VYOM<span style="color:var(--primary-light)">TRAVELS</span></h3>
+        <p style="font-size:14px;line-height:1.6">Official outstation &amp; city car rentals with Bandhavgarh National Park safari bookings across MP.</p>
       </div>
-
-      <div class="foot-col">
+      <div>
         <h4>Quick Links</h4>
         <ul class="foot-links">
           <li><a href="#fleet">Our Fleet</a></li>
-          <li><a href="#estimator">Fare Estimator</a></li>
+          <li><a href="#estimator">Fare Calculator</a></li>
           <li><a href="#safari">Bandhavgarh Safaris</a></li>
-          <li><a href="#packages">Travel Packages</a></li>
-          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#packages">Tour Packages</a></li>
         </ul>
       </div>
-
-      <div class="foot-col">
-        <h4>Services</h4>
+      <div>
+        <h4>Vehicles</h4>
         <ul class="foot-links">
-          <li><a href="javascript:void(0)" onclick="openBookingModal('Airport Pickup')">Airport Pickup &amp; Drop</a></li>
-          <li><a href="javascript:void(0)" onclick="openBookingModal('Self-Drive Car')">Self-Drive Car Hire</a></li>
-          <li><a href="javascript:void(0)" onclick="openBookingModal('Outstation Rental')">Outstation Rentals</a></li>
-          <li><a href="javascript:void(0)" onclick="openBookingModal('Wedding Luxury Hire')">Wedding Luxury Cars</a></li>
-          <li><a href="javascript:void(0)" onclick="openBookingModal('Safari Permit')">Bandhavgarh Permits</a></li>
+          <li><a href="#fleet">Toyota Innova Crysta</a></li>
+          <li><a href="#fleet">Maruti Suzuki Ertiga</a></li>
+          <li><a href="#fleet">Hyundai Verna</a></li>
+          <li><a href="#fleet">Maruti Suzuki Dzire</a></li>
         </ul>
       </div>
-
-      <div class="foot-col">
+      <div>
         <h4>Contact Vyom Travels</h4>
         <ul class="foot-links">
-          <li style="color:#2DD4BF;font-weight:700;font-size:14.5px">👤 Aakash Jaiswal (Travel Consultant)</li>
-          <li style="color:#94A3B8;font-size:14px">📍 707, Cliffton Corporate, AB Road, Vijay Nagar, Indore, MP</li>
-          <li style="color:#94A3B8;font-size:14px">📞 +91 78696 26201 / +91 79994 23348</li>
-          <li style="color:#94A3B8;font-size:14px">✉️ hello@vyomtravels.in</li>
+          <li style="color:#6EE7B7;font-weight:700">👤 Aakash Jaiswal (Travel Consultant)</li>
+          <li>📍 707, Cliffton Corporate, AB Road, Vijay Nagar, Indore, MP</li>
+          <li>📞 +91 78696 26201 / +91 79994 23348</li>
+          <li>✉️ hello@vyomtravels.in</li>
         </ul>
       </div>
     </div>
 
     <div class="foot-bottom">
       <span>&copy; 2026 Vyom Travels. All rights reserved.</span>
-      <span>Designed for Executive Car Rentals &amp; Wildlife Expeditions.</span>
+      <span>Indore Hub • Madhya Pradesh</span>
     </div>
   </div>
 </footer>
 
 <!-- FLOATING WHATSAPP BUTTON -->
-<a href="javascript:void(0)" onclick="openBookingModal('Floating Button')" class="wa-float-btn" aria-label="Chat on WhatsApp">
+<a href="javascript:void(0)" onclick="openModal('Floating Action')" class="wa-float" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 32 32">
     <path d="M16 4C9.4 4 4 9.4 4 16c0 2.2.6 4.3 1.7 6.1L4 28l6.1-1.6c1.7 1 3.7 1.5 5.9 1.5 6.6 0 12-5.4 12-12S22.6 4 16 4z" fill="#fff"/>
     <path d="M16 6.3c5.4 0 9.7 4.3 9.7 9.7s-4.3 9.7-9.7 9.7c-1.9 0-3.7-.5-5.2-1.5l-.4-.2-3.6.9.9-3.5-.2-.4c-1.1-1.6-1.6-3.4-1.6-5.3 0-5.3 4.4-9.6 9.8-9.6" fill="#25D366"/>
@@ -2110,14 +1261,11 @@
 <!-- BOOKING MODAL DIALOG -->
 <div class="modal-backdrop" id="bookingModal">
   <div class="modal-box">
-    <div class="modal-close" onclick="closeBookingModal()">&times;</div>
-    <div style="display:flex;align-items:center;gap:8px">
-      <span class="dot-live"></span>
-      <h3 style="font-size:22px;color:var(--emerald-primary)" id="modalSubject">Reserve Your Booking</h3>
-    </div>
+    <div class="modal-close" onclick="closeModal()">&times;</div>
+    <h3 style="font-size:22px;color:var(--primary)" id="modalSubject">Reserve Your Booking</h3>
     <p style="color:var(--text-muted);font-size:13.5px;margin-top:4px">Fill out your travel details and we'll format a WhatsApp message instantly.</p>
 
-    <form id="modalForm" style="margin-top:20px" onsubmit="submitWhatsAppBooking(event)">
+    <form style="margin-top:20px" onsubmit="submitModalBooking(event)">
       <div class="form-group">
         <label for="bookName">Full Name</label>
         <input type="text" id="bookName" class="form-control" placeholder="e.g. Rahul Sharma" required>
@@ -2129,18 +1277,18 @@
       </div>
 
       <div class="form-group">
-        <label for="bookCar">Preferred Vehicle or Package</label>
+        <label for="bookCar">Preferred Vehicle</label>
         <select id="bookCar" class="form-control">
           <option value="Toyota Innova Crysta">Toyota Innova Crysta (7 Seater)</option>
           <option value="Maruti Suzuki Ertiga">Maruti Suzuki Ertiga (7 Seater)</option>
           <option value="Toyota Innova Hycross">Toyota Innova Hycross (Hybrid)</option>
-          <option value="BMW 5 Series Chauffeur">BMW 5 Series Chauffeur</option>
-          <option value="Audi A6 Luxury">Audi A6 Luxury Sedan</option>
           <option value="Hyundai Verna">Hyundai Verna</option>
           <option value="Maruti Suzuki Dzire">Maruti Suzuki Dzire</option>
           <option value="Hyundai Aura">Hyundai Aura</option>
           <option value="Maruti Suzuki Swift">Maruti Suzuki Swift</option>
-          <option value="Bandhavgarh Safari Package">Bandhavgarh Tiger Safari Package</option>
+          <option value="BMW 5 Series Chauffeur">BMW 5 Series Chauffeur</option>
+          <option value="Audi A6 Luxury">Audi A6 Luxury Sedan</option>
+          <option value="Bandhavgarh Safari Pass">Bandhavgarh Tiger Safari Pass</option>
         </select>
       </div>
 
@@ -2156,102 +1304,32 @@
   </div>
 </div>
 
-<!-- LIGHTBOX MODAL -->
-<div class="modal-backdrop" id="lightboxModal" onclick="closeLightbox()">
-  <div class="modal-box lightbox-box" onclick="event.stopPropagation()">
-    <div class="modal-close" onclick="closeLightbox()">&times;</div>
-    <img id="lightboxImage" class="lightbox-img" src="" alt="Enlarged View">
-  </div>
-</div>
-
-<!-- JAVASCRIPT LOGIC -->
 <script>
-  // Sticky Header Effect
+  // Header scroll shadow
   window.addEventListener('scroll', () => {
     const header = document.getElementById('siteHeader');
-    if (window.scrollY > 40) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
+    if(window.scrollY > 30) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
   });
 
-  // Mobile Drawer Logic
-  const burgerToggle = document.getElementById('burgerToggle');
-  const mobileDrawer = document.getElementById('mobileDrawer');
-  const drawerOverlay = document.getElementById('drawerOverlay');
-  const drawerClose = document.getElementById('drawerClose');
-
-  burgerToggle.addEventListener('click', () => {
-    mobileDrawer.classList.add('open');
-    drawerOverlay.classList.add('open');
-  });
-
-  function closeDrawer() {
-    mobileDrawer.classList.remove('open');
-    drawerOverlay.classList.remove('open');
-  }
-  drawerClose.addEventListener('click', closeDrawer);
-  drawerOverlay.addEventListener('click', closeDrawer);
-
-  // Hero Full-Background Slider Logic
-  const slides = document.querySelectorAll('.hero-bg-slide');
-  const dots = document.querySelectorAll('.slide-nav-dot');
-  const slideCounter = document.getElementById('slideCounter');
-  const slideCaptionText = document.getElementById('slideCaptionText');
-
-  const heroCaptions = [
-    { title: 'Toyota Innova Crysta MPV', sub: 'Engineered for highway & forest roads' },
-    { title: 'Maruti Suzuki Ertiga 7-Seater', sub: 'Family budget outstation rides' },
-    { title: 'BMW 5 Series Chauffeur Sedan', sub: 'Airport transfers & corporate travel' },
-    { title: 'Bandhavgarh Tiger Safaris', sub: 'Core Tala & Magadhi gate permits' }
-  ];
-
-  let currentSlide = 0;
-  let slideInterval = setInterval(nextHeroSlide, 5000);
-
-  function setHeroSlide(idx) {
-    if(!slides.length) return;
-    slides[currentSlide].classList.remove('active');
-    if(dots[currentSlide]) dots[currentSlide].classList.remove('active');
-
-    currentSlide = idx;
-
-    slides[currentSlide].classList.add('active');
-    if(dots[currentSlide]) dots[currentSlide].classList.add('active');
-
-    if(slideCounter) {
-      slideCounter.textContent = `0${currentSlide + 1} / 0${slides.length}`;
-    }
-    if(slideCaptionText && heroCaptions[currentSlide]) {
-      slideCaptionText.textContent = heroCaptions[currentSlide].title;
-    }
-  }
-
-  function nextHeroSlide() {
-    let nextIdx = (currentSlide + 1) % slides.length;
-    setHeroSlide(nextIdx);
-  }
-
-  // Quick Hero Search Handler
-  function submitQuickHeroSearch() {
-    const vehicle = document.getElementById('heroVehicle').value;
-    const tripType = document.getElementById('heroTripType').value;
-    const date = document.getElementById('heroDate').value || 'Upcoming Date';
-    
-    const msg = `Hi Vyom Travels (Aakash Jaiswal), I'd like to check availability & fare for ${vehicle} for a ${tripType} on ${date}.`;
+  // Hero search
+  function submitHeroSearch(e) {
+    e.preventDefault();
+    const car = document.getElementById('searchCar').value;
+    const trip = document.getElementById('searchTrip').value;
+    const date = document.getElementById('searchDate').value;
+    const msg = `Hi Vyom Travels (Aakash Jaiswal), I'd like to check availability & fare for ${car} for a ${trip} on ${date}.`;
     window.open(`https://wa.me/917869626201?text=${encodeURIComponent(msg)}`, '_blank');
   }
 
-  // Fleet Filter Tabs
-  function filterFleet(category, btn) {
+  // Category filter
+  function filterCategory(cat, btn) {
     document.querySelectorAll('.fleet-tabs .tab-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
 
-    const cards = document.querySelectorAll('.fleet-card');
-    cards.forEach(card => {
-      const cats = card.getAttribute('data-category');
-      if (category === 'all' || cats.includes(category)) {
+    document.querySelectorAll('.fleet-card').forEach(card => {
+      const category = card.getAttribute('data-category');
+      if(cat === 'all' || category.includes(cat)) {
         card.style.display = 'flex';
       } else {
         card.style.display = 'none';
@@ -2259,139 +1337,71 @@
     });
   }
 
-  // Fare Estimator Calculations
-  function calculateFare() {
+  // Rate calculator
+  function calculateRate() {
     const rate = parseInt(document.getElementById('estVehicle').value, 10);
     const days = parseInt(document.getElementById('estDays').value, 10) || 1;
     const vehicleSelect = document.getElementById('estVehicle');
-    const vehicleName = vehicleSelect.options[vehicleSelect.selectedIndex].text.split('(')[0].trim();
+    const modelName = vehicleSelect.options[vehicleSelect.selectedIndex].text.split('(')[0].trim();
 
     const total = rate * days;
-
-    document.getElementById('resVehicleName').textContent = vehicleName;
-    document.getElementById('resRateDay').textContent = '₹' + rate.toLocaleString('en-IN');
-    document.getElementById('resDaysCount').textContent = days + (days === 1 ? ' Day' : ' Days');
-    document.getElementById('resTotalAmount').textContent = '₹' + total.toLocaleString('en-IN');
+    document.getElementById('resModel').textContent = modelName;
+    document.getElementById('resRate').textContent = '₹' + rate.toLocaleString('en-IN') + ' / day';
+    document.getElementById('resDays').textContent = days + (days === 1 ? ' Day' : ' Days');
+    document.getElementById('resTotal').textContent = '₹' + total.toLocaleString('en-IN');
   }
 
-  function bookEstimatedTrip() {
-    const vehicleName = document.getElementById('resVehicleName').textContent;
-    const days = document.getElementById('resDaysCount').textContent;
-    const total = document.getElementById('resTotalAmount').textContent;
-    const msg = `Hi Vyom Travels, I'd like to book the ${vehicleName} for ${days}. Estimated cost: ${total}.`;
+  function bookEstimatedFare() {
+    const model = document.getElementById('resModel').textContent;
+    const days = document.getElementById('resDays').textContent;
+    const total = document.getElementById('resTotal').textContent;
+    const msg = `Hi Vyom Travels, I'd like to book ${model} for ${days}. Estimated total: ${total}.`;
     window.open(`https://wa.me/917869626201?text=${encodeURIComponent(msg)}`, '_blank');
   }
 
   // Safari Zone Switcher
-  const zoneData = {
-    tala: {
-      title: 'Gate 1: Tala Zone (Premium Core)',
-      odds: 'Highest Tiger Sighting Odds',
-      desc: 'The historic heart of Bandhavgarh featuring fort ruins, ancient caves, and Charganga stream. Tala holds the lowest vehicle permit cap per session, offering the most coveted sighting tracks.',
-      months: 'March – June',
-      terrain: 'Sal Forest & Rocky Hills',
-      turnaround: '24 – 48 Hours'
-    },
-    magadhi: {
-      title: 'Gate 2: Magadhi Zone (Core)',
-      odds: 'High Density Grassland Tracks',
-      desc: 'Known for wide open meadows and waterholes like Charger Point. Excellent photography angles with fewer vehicle bottlenecks.',
-      months: 'October – May',
-      terrain: 'Meadows & Bamboo Thickets',
-      turnaround: '24 – 48 Hours'
-    },
-    khitauli: {
-      title: 'Gate 3: Khitauli Zone (Core)',
-      odds: 'Great for Birding & Bears',
-      desc: 'Flatter terrain and tranquil drives. Renowned for sloth bear sightings, leopards, and over 250 species of resident birds.',
-      months: 'November – April',
-      terrain: 'Dry Deciduous Canopy',
-      turnaround: '24 Hours'
-    },
-    buffer: {
-      title: 'Dhamokhar & Panpatha Buffer Zones',
-      odds: 'Flexible Night & Day Slots',
-      desc: 'Ideal for repeat visitors and last-minute bookings when core gates are full. Offers flexible slot timings and evening drives.',
-      months: 'Open Year-Round',
-      terrain: 'Forest Periphery & Rivers',
-      turnaround: 'Instant Permits'
-    }
+  const zData = {
+    tala: { title: 'Gate 1: Tala Zone (Premium Core)', desc: 'Historic zone featuring ancient hill fort, caves, and Charganga stream. Tala holds the lowest vehicle permit cap per session, offering top tiger sighting tracks.', months: 'March – June', terrain: 'Sal Forest & Rocky Hills', turnaround: '24 – 48 Hours' },
+    magadhi: { title: 'Gate 2: Magadhi Zone (Core)', desc: 'Known for wide open meadows and waterholes like Charger Point. Excellent photography angles with fewer vehicle bottlenecks.', months: 'October – May', terrain: 'Meadows & Bamboo Thickets', turnaround: '24 – 48 Hours' },
+    khitauli: { title: 'Gate 3: Khitauli Zone (Core)', desc: 'Flatter terrain and tranquil drives. Renowned for sloth bear sightings, leopards, and over 250 species of resident birds.', months: 'November – April', terrain: 'Dry Deciduous Canopy', turnaround: '24 Hours' },
+    buffer: { title: 'Buffer Zones (Dhamokhar & Panpatha)', desc: 'Ideal for repeat visitors and last-minute bookings when core gates are full. Offers flexible slot timings and evening drives.', months: 'Open Year-Round', terrain: 'Forest Periphery & Rivers', turnaround: 'Instant Permits' }
   };
 
-  function switchZone(zoneKey, btn) {
-    document.querySelectorAll('.zone-tab-btn').forEach(b => b.classList.remove('active'));
+  function switchZone(key, btn) {
+    document.querySelectorAll('.zone-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-
-    const data = zoneData[zoneKey];
-    document.getElementById('zoneTitle').textContent = data.title;
-    document.getElementById('zoneOdds').textContent = data.odds;
-    document.getElementById('zoneDesc').textContent = data.desc;
-    document.getElementById('zoneMonths').textContent = data.months;
-    document.getElementById('zoneTerrain').textContent = data.terrain;
-    document.getElementById('zoneTurnaround').textContent = data.turnaround;
+    const d = zData[key];
+    document.getElementById('zTitle').textContent = d.title;
+    document.getElementById('zDesc').textContent = d.desc;
+    document.getElementById('zMonths').textContent = d.months;
+    document.getElementById('zTerrain').textContent = d.terrain;
+    document.getElementById('zTurnaround').textContent = d.turnaround;
   }
 
-  // Modals (Booking & Lightbox)
+  // Modal handlers
   const bookingModal = document.getElementById('bookingModal');
   const modalSubject = document.getElementById('modalSubject');
   const bookCarSelect = document.getElementById('bookCar');
 
-  function openBookingModal(subject = 'General Inquiry') {
-    modalSubject.textContent = `Reserve: ${subject}`;
-    if (subject.includes('Innova') || subject.includes('BMW') || subject.includes('Audi') || subject.includes('Swift') || subject.includes('Ertiga') || subject.includes('Verna') || subject.includes('Dzire') || subject.includes('Aura')) {
-      for (let i = 0; i < bookCarSelect.options.length; i++) {
-        if (bookCarSelect.options[i].value.toLowerCase().includes(subject.split(' ')[0].toLowerCase())) {
-          bookCarSelect.selectedIndex = i;
-          break;
-        }
-      }
-    }
+  function openModal(sub = 'General Inquiry') {
+    modalSubject.textContent = `Reserve: ${sub}`;
     bookingModal.classList.add('open');
   }
-
-  function closeBookingModal() {
+  function closeModal() {
     bookingModal.classList.remove('open');
   }
-
-  function submitWhatsAppBooking(e) {
+  function submitModalBooking(e) {
     e.preventDefault();
     const name = document.getElementById('bookName').value;
     const city = document.getElementById('bookCity').value;
     const car = document.getElementById('bookCar').value;
     const date = document.getElementById('bookDate').value;
-
-    const msg = `Hi Vyom Travels! My name is ${name}. I would like to enquire/book ${car} starting from ${city} on ${date}. Please confirm availability.`;
+    const msg = `Hi Vyom Travels! My name is ${name}. I would like to book ${car} starting from ${city} on ${date}. Please confirm availability.`;
     window.open(`https://wa.me/917869626201?text=${encodeURIComponent(msg)}`, '_blank');
-    closeBookingModal();
+    closeModal();
   }
 
-  // Lightbox
-  const lightboxModal = document.getElementById('lightboxModal');
-  const lightboxImage = document.getElementById('lightboxImage');
-
-  function openLightbox(imgSrc) {
-    lightboxImage.src = imgSrc;
-    lightboxModal.classList.add('open');
-  }
-
-  function closeLightbox() {
-    lightboxModal.classList.remove('open');
-  }
-
-  // Scroll Reveal Intersection Observer
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Initialize Fare Estimator
-  calculateFare();
+  calculateRate();
 </script>
 </body>
 </html>
