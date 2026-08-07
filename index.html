@@ -49,11 +49,7 @@
     --shadow-lg: 0 20px 45px -15px rgba(15, 23, 42, 0.12);
   }
 
-  *, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0; padding: 0;
-  }
-
+  *, *::before, *::after { box-sizing: border-box; }
   html {
     scroll-behavior: smooth;
     background-color: var(--bg-main);
@@ -62,12 +58,14 @@
     font-size: 16px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 
   body {
     background-color: var(--bg-main);
     color: var(--text-main);
     overflow-x: hidden;
+    width: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -392,6 +390,43 @@
   .modal-box { background: #FFFFFF; border-radius: var(--radius-xl); padding: 36px; max-width: 520px; width: 100%; position: relative; box-shadow: 0 25px 50px rgba(0,0,0,0.25); }
   .modal-close { position: absolute; top: 20px; right: 20px; color: var(--text-muted); font-size: 22px; cursor: pointer; }
 
+  /* ------- MOBILE NAV OVERLAY (body-level, outside header) ------- */
+  #mobileNavOverlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(10,16,30,0.98);
+    z-index: 9999;
+    flex-direction: column;
+    padding: 0 32px;
+    justify-content: center;
+    gap: 0;
+  }
+  #mobileNavOverlay.open { display: flex; }
+  #mobileNavOverlay a {
+    font-size: 26px; font-weight: 700; color: #FFFFFF;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+  #mobileNavOverlay a:last-of-type { border-bottom: none; }
+  #mobileNavOverlay .mobile-book-btn {
+    margin-top: 28px;
+    background: linear-gradient(135deg, #059669, #047857);
+    color: #FFF; font-weight: 700; font-size: 16px;
+    padding: 16px 24px; border-radius: 12px;
+    text-align: center; border: none; cursor: pointer;
+    font-family: var(--font-heading); width: 100%;
+  }
+  .mob-close-btn {
+    position: absolute; top: 20px; right: 20px;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+    color: #FFF; font-size: 22px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+  }
+
   @media (max-width: 1040px) {
     .hero-search-bar { grid-template-columns: 1fr 1fr; }
     .trust-grid { grid-template-columns: repeat(2, 1fr); }
@@ -403,49 +438,16 @@
   }
 
   @media (max-width: 768px) {
+    /* ------- BASE ------- */
+    .wrap { padding: 0 16px; }
+    img { max-width: 100%; }
+
     /* ------- NAVBAR ------- */
     .nav-menu { display: none; }
-    /* Mobile overlay — direct body child, no backdrop-filter trap */
-    #mobileNavOverlay {
-      display: none;
-      position: fixed; inset: 0;
-      background: rgba(10,16,30,0.98);
-      z-index: 9999;
-      flex-direction: column;
-      padding: 0 32px;
-      justify-content: center;
-      gap: 0;
-    }
-    #mobileNavOverlay.open { display: flex; }
-    #mobileNavOverlay a {
-      font-size: 26px; font-weight: 700; color: #FFFFFF;
-      padding: 20px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      width: 100%;
-      font-family: var(--font-heading);
-      letter-spacing: -0.02em;
-    }
-    #mobileNavOverlay a:last-of-type { border-bottom: none; }
-    #mobileNavOverlay .mobile-book-btn {
-      margin-top: 32px;
-      background: linear-gradient(135deg, #059669, #047857);
-      color: #FFF; font-weight: 700; font-size: 16px;
-      padding: 16px 24px; border-radius: 12px;
-      text-align: center; border: none; cursor: pointer;
-      font-family: var(--font-heading);
-    }
-    .mob-close-btn {
-      position: absolute; top: 20px; right: 20px;
-      width: 44px; height: 44px; border-radius: 50%;
-      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
-      color: #FFF; font-size: 22px; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-heading);
-    }
     .hamburger {
       display: flex; flex-direction: column; justify-content: center;
       gap: 5px; width: 40px; height: 40px; cursor: pointer; z-index: 300;
-      background: none; border: none; padding: 6px;
+      background: none; border: none; padding: 6px; flex-shrink: 0;
     }
     .hamburger span {
       display: block; height: 2.5px; border-radius: 2px;
@@ -454,85 +456,121 @@
     .hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
-    .nav-bar { padding: 12px 16px; }
-    .brand-text { font-size: 18px; }
-    .brand-text small { font-size: 9px; }
+    .nav-bar { padding: 10px 14px; }
+    .brand-text { font-size: 17px; }
+    .brand-text small { font-size: 8.5px; }
+    /* Hide "Book Ride" button on very small screens in header to prevent overflow */
+    .nav-bar > div > .btn { display: none; }
 
     /* ------- HERO ------- */
-    .hero-section { min-height: 100svh; padding: 110px 16px 60px; }
-    .hero-container { padding: 0 4px; }
-    .hero-badge-pill { font-size: 11px; padding: 6px 14px; }
-    .hero-title-main { font-size: clamp(30px, 8vw, 46px); }
-    .hero-sub-text { font-size: 14px; }
-    .hero-search-bar {
-      grid-template-columns: 1fr; gap: 10px; padding: 14px 14px;
-      border-radius: var(--radius-lg);
+    .hero-section {
+      min-height: 100svh;
+      padding: 100px 0 60px;
     }
-    .hero-cta-row { flex-direction: column; gap: 12px; width: 100%; }
+    .hero-container { padding: 0 16px; width: 100%; }
+    .hero-badge-pill { font-size: 11px; padding: 6px 14px; text-align: center; }
+    .hero-title-main { font-size: clamp(28px, 7.5vw, 42px); }
+    .hero-sub-text { font-size: 14px; padding: 0 4px; }
+    .hero-search-bar {
+      grid-template-columns: 1fr;
+      gap: 10px; padding: 14px;
+      width: 100%; max-width: 100%;
+      border-radius: 16px;
+      margin-top: 24px;
+    }
+    .hero-cta-row { flex-direction: column; gap: 10px; width: 100%; }
     .hero-cta-row .btn { width: 100%; justify-content: center; }
 
     /* ------- TRUST STRIP ------- */
-    .trust-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
-    .trust-box { gap: 10px; }
-    .trust-info h5 { font-size: 13px; }
+    .trust-strip { padding: 18px 0; }
+    .trust-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .trust-box { gap: 8px; }
+    .trust-icon { width: 38px; height: 38px; font-size: 16px; }
+    .trust-info h5 { font-size: 12.5px; }
+    .trust-info p { font-size: 11px; }
 
-    /* ------- SECTION GENERAL ------- */
-    .section-pad { padding: 60px 0; }
-    .section-head { margin-bottom: 36px; }
-    .section-head h2 { font-size: clamp(24px, 6vw, 34px); }
-    .wrap { padding: 0 16px; }
+    /* ------- SECTIONS ------- */
+    .section-pad { padding: 52px 0; }
+    .section-head { margin-bottom: 30px; padding: 0 4px; }
+    .section-head h2 { font-size: clamp(22px, 6vw, 32px); }
+    .section-head p { font-size: 14px; }
+
+    /* ------- FLEET TABS ------- */
+    .fleet-tabs {
+      display: flex; flex-wrap: nowrap;
+      overflow-x: auto; justify-content: flex-start;
+      gap: 8px; padding-bottom: 8px; margin-bottom: 28px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .fleet-tabs::-webkit-scrollbar { display: none; }
+    .tab-btn { white-space: nowrap; flex-shrink: 0; padding: 8px 14px; font-size: 13px; }
 
     /* ------- FLEET GRID ------- */
-    .fleet-grid { grid-template-columns: 1fr; gap: 20px; }
-    .fleet-tabs { gap: 8px; }
-    .tab-btn { padding: 8px 16px; font-size: 13px; }
-    .car-image-box { height: 180px; }
-    .fleet-body { padding: 18px; }
-    .fleet-title { font-size: 17px; }
-    .price-tag b { font-size: 18px; }
+    .fleet-grid { grid-template-columns: 1fr; gap: 18px; }
+    .car-image-box { height: 175px; }
+    .fleet-body { padding: 16px; }
+    .fleet-title { font-size: 16px; }
+    .fleet-sub { font-size: 12.5px; }
+    .price-tag b { font-size: 17px; }
+    .spec-pill { font-size: 11px; padding: 4px 8px; }
 
     /* ------- FARE ESTIMATOR ------- */
-    .estimator-card { padding: 22px 16px; }
-    .estimator-grid { grid-template-columns: 1fr; gap: 24px; }
-    .calc-total b { font-size: 26px; }
+    .estimator-card { padding: 20px 14px; margin: 0 4px; }
+    .estimator-grid { grid-template-columns: 1fr; gap: 20px; }
+    .calc-total b { font-size: 24px; }
+    .form-control { font-size: 14px; padding: 11px 12px; }
 
     /* ------- SAFARI SECTION ------- */
-    .safari-grid { grid-template-columns: 1fr; gap: 32px; }
+    .safari-grid { grid-template-columns: 1fr; gap: 28px; }
     .safari-gallery-stack { grid-template-columns: 1fr 1fr; gap: 10px; }
-    .zone-tabs { gap: 8px; }
-    .zone-tab-btn { padding: 10px 16px; font-size: 13px; }
-    .zone-content-box { padding: 20px; }
+    .zone-tabs {
+      gap: 8px; overflow-x: auto; flex-wrap: nowrap;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 10px;
+    }
+    .zone-tabs::-webkit-scrollbar { display: none; }
+    .zone-tab-btn { padding: 9px 14px; font-size: 12.5px; white-space: nowrap; flex-shrink: 0; }
+    .zone-content-box { padding: 18px 14px; }
+    .zone-stats-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
 
     /* ------- PACKAGES ------- */
-    .pack-grid { grid-template-columns: 1fr; gap: 20px; }
-    .pack-card { padding: 28px 20px; }
-    .pack-price b { font-size: 28px; }
+    .pack-grid { grid-template-columns: 1fr; gap: 18px; }
+    .pack-card { padding: 24px 18px; }
+    .pack-price b { font-size: 26px; }
+    .pack-title { font-size: 20px; }
 
     /* ------- FOOTER ------- */
-    .foot-grid { grid-template-columns: 1fr; gap: 36px; }
-    .foot-bottom { flex-direction: column; gap: 10px; text-align: center; }
-    footer { padding: 56px 0 24px; }
+    footer { padding: 48px 0 20px; }
+    .foot-grid { grid-template-columns: 1fr; gap: 32px; }
+    .foot-bottom { flex-direction: column; gap: 8px; text-align: center; font-size: 12px; }
 
     /* ------- MODAL ------- */
-    .modal-box { padding: 24px 18px; border-radius: var(--radius-lg); }
-    .modal-backdrop { padding: 12px; align-items: flex-end; }
-    .modal-box { border-radius: 20px 20px 0 0; max-width: 100%; }
+    .modal-backdrop { padding: 0; align-items: flex-end; }
+    .modal-box {
+      border-radius: 20px 20px 0 0;
+      max-width: 100%; width: 100%;
+      padding: 24px 18px 32px;
+      max-height: 90vh; overflow-y: auto;
+    }
 
     /* ------- FLOATING WHATSAPP ------- */
-    .wa-float-btn { bottom: 18px; right: 16px; width: 54px; height: 54px; }
-    .wa-float-btn svg { width: 28px; height: 28px; }
+    .wa-float-btn { bottom: 16px; right: 14px; width: 52px; height: 52px; }
+    .wa-float-btn svg { width: 26px; height: 26px; }
   }
 
   @media (max-width: 400px) {
-    .trust-grid { grid-template-columns: 1fr; }
+    .nav-bar { padding: 8px 12px; }
+    .brand-icon { width: 36px; height: 36px; font-size: 18px; }
+    .trust-grid { grid-template-columns: 1fr; gap: 10px; }
     .safari-gallery-stack { grid-template-columns: 1fr; }
-    .fleet-tabs { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 6px; }
-    .tab-btn { white-space: nowrap; flex-shrink: 0; }
+    .hero-title-main { font-size: clamp(24px, 8vw, 36px); }
+    .estimator-card { padding: 16px 10px; }
   }
 
   /* Hide hamburger on desktop */
   @media (min-width: 769px) {
     .hamburger { display: none !important; }
+    .nav-bar > div > .btn { display: inline-flex !important; }
   }
 </style>
 </head>
@@ -1071,7 +1109,7 @@
             The historic heart of Bandhavgarh featuring fort ruins, ancient caves, and Charganga stream. Tala holds the lowest vehicle permit cap per session, offering the most coveted sighting tracks.
           </p>
 
-          <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:16px;margin-top:20px;padding-top:16px;border-top:1px solid var(--border-color)">
+          <div class="zone-stats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px;padding-top:16px;border-top:1px solid var(--border-color)">
             <div>
               <small style="color:var(--text-muted);font-size:11px;text-transform:uppercase">Best Sighting Months</small>
               <p id="zoneMonths" style="font-weight:700;font-size:14px;color:var(--text-heading)">March – June</p>
