@@ -405,15 +405,42 @@
   @media (max-width: 768px) {
     /* ------- NAVBAR ------- */
     .nav-menu { display: none; }
-    .nav-menu.open {
-      display: flex; flex-direction: column; align-items: flex-start;
-      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(15,23,42,0.97); backdrop-filter: blur(16px);
-      z-index: 200; padding: 90px 32px 40px; gap: 8px;
+    /* Mobile overlay — direct body child, no backdrop-filter trap */
+    #mobileNavOverlay {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(10,16,30,0.98);
+      z-index: 9999;
+      flex-direction: column;
+      padding: 0 32px;
+      justify-content: center;
+      gap: 0;
     }
-    .nav-menu.open a {
-      font-size: 22px; font-weight: 700; color: #FFFFFF; padding: 14px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.08); width: 100%;
+    #mobileNavOverlay.open { display: flex; }
+    #mobileNavOverlay a {
+      font-size: 26px; font-weight: 700; color: #FFFFFF;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      width: 100%;
+      font-family: var(--font-heading);
+      letter-spacing: -0.02em;
+    }
+    #mobileNavOverlay a:last-of-type { border-bottom: none; }
+    #mobileNavOverlay .mobile-book-btn {
+      margin-top: 32px;
+      background: linear-gradient(135deg, #059669, #047857);
+      color: #FFF; font-weight: 700; font-size: 16px;
+      padding: 16px 24px; border-radius: 12px;
+      text-align: center; border: none; cursor: pointer;
+      font-family: var(--font-heading);
+    }
+    .mob-close-btn {
+      position: absolute; top: 20px; right: 20px;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+      color: #FFF; font-size: 22px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-heading);
     }
     .hamburger {
       display: flex; flex-direction: column; justify-content: center;
@@ -424,9 +451,9 @@
       display: block; height: 2.5px; border-radius: 2px;
       background: var(--text-heading); transition: all 0.3s ease;
     }
-    .hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); background:#FFF; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); background:#FFF; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
     .nav-bar { padding: 12px 16px; }
     .brand-text { font-size: 18px; }
     .brand-text small { font-size: 9px; }
@@ -522,25 +549,36 @@
       </div>
     </a>
 
-    <nav class="nav-menu" id="navMenu">
-      <a href="#fleet" onclick="closeMenu()">Our Fleet</a>
-      <a href="#estimator" onclick="closeMenu()">Fare Estimator</a>
-      <a href="#safari" onclick="closeMenu()">Tiger Safaris</a>
-      <a href="#packages" onclick="closeMenu()">Packages</a>
-      <a href="#contact" onclick="closeMenu()">Contact</a>
+    <!-- Desktop nav -->
+    <nav class="nav-menu">
+      <a href="#fleet">Our Fleet</a>
+      <a href="#estimator">Fare Estimator</a>
+      <a href="#safari">Tiger Safaris</a>
+      <a href="#packages">Packages</a>
+      <a href="#contact">Contact</a>
     </nav>
 
     <div style="display:flex;align-items:center;gap:10px;">
       <button class="btn btn-emerald btn-sm" onclick="openBookingModal('Header Inquiry')" style="white-space:nowrap">
         Book Ride / Safari
       </button>
-      <!-- Hamburger — hidden on desktop via inline style, shown on mobile via CSS -->
       <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Open menu" style="display:none">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 </header>
+
+<!-- MOBILE NAV OVERLAY — placed at body level to escape backdrop-filter trap -->
+<div id="mobileNavOverlay">
+  <button class="mob-close-btn" onclick="closeMenu()">✕</button>
+  <a href="#fleet" onclick="closeMenu()">Our Fleet</a>
+  <a href="#estimator" onclick="closeMenu()">Fare Estimator</a>
+  <a href="#safari" onclick="closeMenu()">Tiger Safaris</a>
+  <a href="#packages" onclick="closeMenu()">Packages</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <button class="mobile-book-btn" onclick="closeMenu(); openBookingModal('Mobile Inquiry')">📞 Book Ride / Safari</button>
+</div>
 
 <main id="top">
 
@@ -1324,22 +1362,22 @@
     closeBookingModal();
   }
 
-  // Hamburger Menu
+  // Hamburger Menu — targets body-level overlay (not inside header, avoids backdrop-filter trap)
   function toggleMenu() {
-    const menu = document.getElementById('navMenu');
+    const overlay = document.getElementById('mobileNavOverlay');
     const btn = document.getElementById('hamburgerBtn');
-    menu.classList.toggle('open');
+    overlay.classList.toggle('open');
     btn.classList.toggle('open');
-    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+    document.body.style.overflow = overlay.classList.contains('open') ? 'hidden' : '';
   }
   function closeMenu() {
-    const menu = document.getElementById('navMenu');
+    const overlay = document.getElementById('mobileNavOverlay');
     const btn = document.getElementById('hamburgerBtn');
-    menu.classList.remove('open');
+    overlay.classList.remove('open');
     btn.classList.remove('open');
     document.body.style.overflow = '';
   }
-  // Show hamburger only on mobile (JS reinforcement)
+  // Show hamburger only on mobile
   function checkHamburger() {
     const btn = document.getElementById('hamburgerBtn');
     btn.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
