@@ -401,12 +401,111 @@
     .safari-grid { grid-template-columns: 1fr; }
     .foot-grid { grid-template-columns: 1fr 1fr; }
   }
+
   @media (max-width: 768px) {
+    /* ------- NAVBAR ------- */
     .nav-menu { display: none; }
-    .hero-search-bar { grid-template-columns: 1fr; }
+    .nav-menu.open {
+      display: flex; flex-direction: column; align-items: flex-start;
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(15,23,42,0.97); backdrop-filter: blur(16px);
+      z-index: 200; padding: 90px 32px 40px; gap: 8px;
+    }
+    .nav-menu.open a {
+      font-size: 22px; font-weight: 700; color: #FFFFFF; padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08); width: 100%;
+    }
+    .hamburger {
+      display: flex; flex-direction: column; justify-content: center;
+      gap: 5px; width: 40px; height: 40px; cursor: pointer; z-index: 300;
+      background: none; border: none; padding: 6px;
+    }
+    .hamburger span {
+      display: block; height: 2.5px; border-radius: 2px;
+      background: var(--text-heading); transition: all 0.3s ease;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); background:#FFF; }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); background:#FFF; }
+    .nav-bar { padding: 12px 16px; }
+    .brand-text { font-size: 18px; }
+    .brand-text small { font-size: 9px; }
+
+    /* ------- HERO ------- */
+    .hero-section { min-height: 100svh; padding: 110px 16px 60px; }
+    .hero-container { padding: 0 4px; }
+    .hero-badge-pill { font-size: 11px; padding: 6px 14px; }
+    .hero-title-main { font-size: clamp(30px, 8vw, 46px); }
+    .hero-sub-text { font-size: 14px; }
+    .hero-search-bar {
+      grid-template-columns: 1fr; gap: 10px; padding: 14px 14px;
+      border-radius: var(--radius-lg);
+    }
+    .hero-cta-row { flex-direction: column; gap: 12px; width: 100%; }
+    .hero-cta-row .btn { width: 100%; justify-content: center; }
+
+    /* ------- TRUST STRIP ------- */
+    .trust-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+    .trust-box { gap: 10px; }
+    .trust-info h5 { font-size: 13px; }
+
+    /* ------- SECTION GENERAL ------- */
+    .section-pad { padding: 60px 0; }
+    .section-head { margin-bottom: 36px; }
+    .section-head h2 { font-size: clamp(24px, 6vw, 34px); }
+    .wrap { padding: 0 16px; }
+
+    /* ------- FLEET GRID ------- */
+    .fleet-grid { grid-template-columns: 1fr; gap: 20px; }
+    .fleet-tabs { gap: 8px; }
+    .tab-btn { padding: 8px 16px; font-size: 13px; }
+    .car-image-box { height: 180px; }
+    .fleet-body { padding: 18px; }
+    .fleet-title { font-size: 17px; }
+    .price-tag b { font-size: 18px; }
+
+    /* ------- FARE ESTIMATOR ------- */
+    .estimator-card { padding: 22px 16px; }
+    .estimator-grid { grid-template-columns: 1fr; gap: 24px; }
+    .calc-total b { font-size: 26px; }
+
+    /* ------- SAFARI SECTION ------- */
+    .safari-grid { grid-template-columns: 1fr; gap: 32px; }
+    .safari-gallery-stack { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .zone-tabs { gap: 8px; }
+    .zone-tab-btn { padding: 10px 16px; font-size: 13px; }
+    .zone-content-box { padding: 20px; }
+
+    /* ------- PACKAGES ------- */
+    .pack-grid { grid-template-columns: 1fr; gap: 20px; }
+    .pack-card { padding: 28px 20px; }
+    .pack-price b { font-size: 28px; }
+
+    /* ------- FOOTER ------- */
+    .foot-grid { grid-template-columns: 1fr; gap: 36px; }
+    .foot-bottom { flex-direction: column; gap: 10px; text-align: center; }
+    footer { padding: 56px 0 24px; }
+
+    /* ------- MODAL ------- */
+    .modal-box { padding: 24px 18px; border-radius: var(--radius-lg); }
+    .modal-backdrop { padding: 12px; align-items: flex-end; }
+    .modal-box { border-radius: 20px 20px 0 0; max-width: 100%; }
+
+    /* ------- FLOATING WHATSAPP ------- */
+    .wa-float-btn { bottom: 18px; right: 16px; width: 54px; height: 54px; }
+    .wa-float-btn svg { width: 28px; height: 28px; }
+  }
+
+  @media (max-width: 400px) {
     .trust-grid { grid-template-columns: 1fr; }
-    .fleet-grid { grid-template-columns: 1fr; }
-    .foot-grid { grid-template-columns: 1fr; }
+    .safari-gallery-stack { grid-template-columns: 1fr; }
+    .fleet-tabs { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 6px; }
+    .tab-btn { white-space: nowrap; flex-shrink: 0; }
+  }
+
+  /* Hide hamburger on desktop */
+  @media (min-width: 769px) {
+    .hamburger { display: none !important; }
   }
 </style>
 </head>
@@ -423,17 +522,23 @@
       </div>
     </a>
 
-    <nav class="nav-menu">
-      <a href="#fleet">Our Fleet</a>
-      <a href="#estimator">Fare Estimator</a>
-      <a href="#safari">Tiger Safaris</a>
-      <a href="#packages">Packages</a>
-      <a href="#contact">Contact</a>
+    <nav class="nav-menu" id="navMenu">
+      <a href="#fleet" onclick="closeMenu()">Our Fleet</a>
+      <a href="#estimator" onclick="closeMenu()">Fare Estimator</a>
+      <a href="#safari" onclick="closeMenu()">Tiger Safaris</a>
+      <a href="#packages" onclick="closeMenu()">Packages</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
     </nav>
 
-    <button class="btn btn-emerald btn-sm" onclick="openBookingModal('Header Inquiry')">
-      Book Ride / Safari
-    </button>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <button class="btn btn-emerald btn-sm" onclick="openBookingModal('Header Inquiry')" style="white-space:nowrap">
+        Book Ride / Safari
+      </button>
+      <!-- Hamburger — hidden on desktop via inline style, shown on mobile via CSS -->
+      <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Open menu" style="display:none">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -1218,6 +1323,29 @@
     window.open(`https://wa.me/917869626201?text=${encodeURIComponent(msg)}`, '_blank');
     closeBookingModal();
   }
+
+  // Hamburger Menu
+  function toggleMenu() {
+    const menu = document.getElementById('navMenu');
+    const btn = document.getElementById('hamburgerBtn');
+    menu.classList.toggle('open');
+    btn.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  }
+  function closeMenu() {
+    const menu = document.getElementById('navMenu');
+    const btn = document.getElementById('hamburgerBtn');
+    menu.classList.remove('open');
+    btn.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  // Show hamburger only on mobile (JS reinforcement)
+  function checkHamburger() {
+    const btn = document.getElementById('hamburgerBtn');
+    btn.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
+  }
+  checkHamburger();
+  window.addEventListener('resize', checkHamburger);
 
   calculateFare();
 </script>
