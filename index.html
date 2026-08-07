@@ -250,6 +250,44 @@
     box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
   }
 
+  /* ---------- HAMBURGER BUTTON (THREE LINES ICON) ---------- */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba(15, 23, 42, 0.04);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    padding: 6px;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+  }
+  .hamburger:hover {
+    background: rgba(15, 23, 42, 0.08);
+  }
+  .hamburger span {
+    display: block;
+    width: 20px;
+    height: 2.5px;
+    border-radius: 2px;
+    background: var(--text-heading);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+
   /* ---------- HERO SECTION (LIGHTER BG & HIGH-CONTRAST CARS) ---------- */
   .hero-section {
     position: relative; width: 100%; min-height: 88vh;
@@ -902,7 +940,7 @@
       <button class="btn btn-emerald btn-sm" onclick="openBookingModal('Header Inquiry')" style="white-space:nowrap">
         Book Ride / Safari
       </button>
-      <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Open menu" style="display:none">
+      <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </div>
