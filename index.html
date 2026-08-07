@@ -413,20 +413,22 @@
   .pack-price b { font-size: 34px; color: var(--emerald-primary); }
 
   /* ---------- FOOTER ---------- */
-  footer { background: var(--navy-dark); color: #94A3B8; border-top: 1px solid var(--border-color); padding: 80px 0 30px; }
-  .foot-grid { display: grid; grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr; gap: 40px; }
-  .foot-col h4 { font-size: 15px; color: #FFFFFF; margin-bottom: 20px; letter-spacing: 0.05em; text-transform: uppercase; }
-  .foot-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-  .foot-links a { color: #94A3B8; font-size: 14px; }
+  footer { background: var(--navy-dark); color: #94A3B8; border-top: 1px solid var(--border-color); padding: 70px 0 30px; }
+  .foot-grid { display: grid; grid-template-columns: 1.2fr 0.7fr 1.1fr 1.3fr; gap: 36px; align-items: start; }
+  .foot-col h4 { font-size: 15px; color: #FFFFFF; margin-bottom: 18px; letter-spacing: 0.05em; text-transform: uppercase; font-family: var(--font-heading); }
+  .foot-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .foot-links a { color: #94A3B8; font-size: 14px; transition: color 0.2s ease; }
   .foot-links a:hover { color: #10B981; }
-  .foot-bottom { margin-top: 60px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; font-size: 13px; color: #64748B; }
+  .foot-bottom { margin-top: 50px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; font-size: 13px; color: #64748B; }
 
   /* Floating WhatsApp */
   .wa-float-btn {
     position: fixed; bottom: 28px; right: 28px; z-index: 90;
     width: 60px; height: 60px; border-radius: 50%; background: #25D366;
     display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
+    transition: transform 0.25s ease;
   }
+  .wa-float-btn:hover { transform: scale(1.08); }
   .wa-float-btn svg { width: 32px; height: 32px; fill: #FFF; }
 
   /* Modal */
@@ -444,7 +446,7 @@
     display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 24px;
   }
 
-  /* ------- MOBILE NAV OVERLAY (body-level, outside header) ------- */
+  /* ------- MOBILE NAV OVERLAY ------- */
   #mobileNavOverlay {
     display: none;
     position: fixed; inset: 0;
@@ -457,8 +459,8 @@
   }
   #mobileNavOverlay.open { display: flex; }
   #mobileNavOverlay a {
-    font-size: 26px; font-weight: 700; color: #FFFFFF;
-    padding: 20px 0;
+    font-size: 22px; font-weight: 700; color: #FFFFFF;
+    padding: 16px 0;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     width: 100%;
     font-family: var(--font-heading);
@@ -466,10 +468,10 @@
   }
   #mobileNavOverlay a:last-of-type { border-bottom: none; }
   #mobileNavOverlay .mobile-book-btn {
-    margin-top: 28px;
+    margin-top: 24px;
     background: linear-gradient(135deg, #059669, #047857);
     color: #FFF; font-weight: 700; font-size: 16px;
-    padding: 16px 24px; border-radius: 12px;
+    padding: 15px 24px; border-radius: 12px;
     text-align: center; border: none; cursor: pointer;
     font-family: var(--font-heading); width: 100%;
   }
@@ -481,158 +483,19 @@
     display: flex; align-items: center; justify-content: center;
   }
 
-  @media (max-width: 1040px) {
-    .hero-search-bar { grid-template-columns: 1fr 1fr; }
-    .trust-grid { grid-template-columns: repeat(2, 1fr); }
-    .fleet-grid { grid-template-columns: repeat(2, 1fr); }
-    .pack-grid { grid-template-columns: 1fr; }
-    .estimator-grid { grid-template-columns: 1fr; }
-    .safari-grid { grid-template-columns: 1fr; }
-    .foot-grid { grid-template-columns: 1fr 1fr; }
-  }
-
-  @media (max-width: 768px) {
-    /* ------- BASE ------- */
-    .wrap { padding: 0 16px; }
-    img { max-width: 100%; }
-
-    /* ------- NAVBAR ------- */
-    .nav-menu { display: none; }
-    .hamburger {
-      display: flex; flex-direction: column; justify-content: center;
-      gap: 5px; width: 40px; height: 40px; cursor: pointer; z-index: 300;
-      background: none; border: none; padding: 6px; flex-shrink: 0;
-    }
-    .hamburger span {
-      display: block; height: 2.5px; border-radius: 2px;
-      background: var(--text-heading); transition: all 0.3s ease;
-    }
-    .hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
-    .nav-bar { padding: 10px 14px; }
-    .brand-text { font-size: 17px; }
-    .brand-text small { font-size: 8.5px; }
-    /* Hide "Book Ride" button on very small screens in header to prevent overflow */
-    .nav-bar > div > .btn { display: none; }
-
-    /* ------- HERO ------- */
-    .hero-section { min-height: 100svh; padding: 100px 0 60px; overflow: hidden; }
-    .hero-container { padding: 0 16px; width: 100%; max-width: 100%; }
-    .hero-badge-pill { font-size: 11px; padding: 6px 14px; text-align: center; max-width: 100%; }
-    .hero-title-main { font-size: clamp(28px, 7.5vw, 42px); word-break: break-word; }
-    .hero-sub-text { font-size: 14px; padding: 0; word-break: break-word; }
-    .hero-search-bar {
-      grid-template-columns: 1fr;
-      gap: 10px; padding: 14px;
-      width: 100%; max-width: 100%;
-      border-radius: 16px;
-      margin-top: 24px;
-    }
-    .hero-cta-row { flex-direction: column; gap: 10px; width: 100%; }
-    .hero-cta-row .btn { width: 100%; justify-content: center; }
-
-    /* ------- TRUST STRIP ------- */
-    .trust-strip { padding: 18px 0; }
-    .trust-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-    .trust-box { gap: 8px; }
-    .trust-icon { width: 38px; height: 38px; font-size: 16px; }
-    .trust-info h5 { font-size: 12.5px; }
-    .trust-info p { font-size: 11px; }
-
-    /* ------- SECTIONS ------- */
-    .section-pad { padding: 52px 0; }
-    .section-head { margin-bottom: 30px; padding: 0 4px; }
-    .section-head h2 { font-size: clamp(22px, 6vw, 32px); }
-    .section-head p { font-size: 14px; }
-
-    /* ------- FLEET TABS ------- */
-    .fleet-tabs {
-      display: flex; flex-wrap: nowrap;
-      overflow-x: auto; justify-content: flex-start;
-      gap: 8px; padding-bottom: 8px; margin-bottom: 28px;
-      -webkit-overflow-scrolling: touch;
-    }
-    .fleet-tabs::-webkit-scrollbar { display: none; }
-    .tab-btn { white-space: nowrap; flex-shrink: 0; padding: 8px 14px; font-size: 13px; }
-
-    /* ------- FLEET GRID ------- */
-    .fleet-grid { grid-template-columns: 1fr; gap: 18px; }
-    .car-image-box { height: 175px; }
-    .fleet-body { padding: 16px; }
-    .fleet-title { font-size: 16px; }
-    .fleet-sub { font-size: 12.5px; }
-    .price-tag b { font-size: 17px; }
-    .spec-pill { font-size: 11px; padding: 4px 8px; }
-
-    /* ------- FARE ESTIMATOR ------- */
-    .estimator-card { padding: 20px 14px; margin: 0 4px; }
-    .estimator-grid { grid-template-columns: 1fr; gap: 20px; }
-    .calc-total b { font-size: 24px; }
-    .form-control { font-size: 14px; padding: 11px 12px; }
-
-    .btn-row { flex-direction: column; gap: 10px; }
-    .btn-row .btn { width: 100%; justify-content: center; text-align: center; }
-
-    /* ------- SAFARI SECTION ------- */
-    .safari-grid { grid-template-columns: 1fr; gap: 28px; }
-    .safari-gallery-stack { grid-template-columns: 1fr 1fr; gap: 10px; }
-    .zone-tabs {
-      gap: 8px; overflow-x: auto; flex-wrap: nowrap;
-      -webkit-overflow-scrolling: touch;
-      padding-bottom: 10px;
-    }
-    .zone-tabs::-webkit-scrollbar { display: none; }
-    .zone-tab-btn { padding: 9px 14px; font-size: 12.5px; white-space: nowrap; flex-shrink: 0; }
-    .zone-content-box { padding: 18px 14px; }
-    .zone-stats-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
-
-    /* ------- PACKAGES ------- */
-    .pack-grid { grid-template-columns: 1fr; gap: 18px; }
-    .pack-card { padding: 24px 18px; }
-    .pack-price b { font-size: 26px; }
-    .pack-title { font-size: 20px; }
-
-    /* ------- FOOTER ------- */
-    footer { padding: 48px 0 20px; }
-    .foot-grid { grid-template-columns: 1fr; gap: 32px; }
-    .foot-bottom { flex-direction: column; gap: 8px; text-align: center; font-size: 12px; }
-
-    /* ------- MODAL ------- */
-    .modal-backdrop { padding: 0; align-items: flex-end; }
-    .modal-box {
-      border-radius: 20px 20px 0 0;
-      max-width: 100%; width: 100%;
-      padding: 24px 18px 32px;
-      max-height: 90vh; overflow-y: auto;
-    }
-
-    /* ------- FLOATING WHATSAPP ------- */
-    .wa-float-btn { bottom: 16px; right: 14px; width: 52px; height: 52px; }
-    .wa-float-btn svg { width: 26px; height: 26px; }
-  }
-
-  @media (max-width: 400px) {
-    .nav-bar { padding: 8px 12px; }
-    .brand-icon { width: 36px; height: 36px; font-size: 18px; }
-    .trust-grid { grid-template-columns: 1fr; gap: 10px; }
-    .safari-gallery-stack { grid-template-columns: 1fr; }
-    .hero-title-main { font-size: clamp(24px, 8vw, 36px); }
-    .estimator-card { padding: 16px 10px; }
-  }
-
   /* ------- POPULAR ROUTES ------- */
+  #routes { background: var(--bg-main); }
   .routes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 22px;
     margin-top: 36px;
   }
   .route-card {
-    background: var(--bg-card);
+    background: #FFFFFF;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
-    padding: 24px;
+    padding: 24px 20px;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     display: flex;
@@ -645,38 +508,58 @@
   }
   .route-badge {
     align-self: flex-start;
-    padding: 4px 12px;
+    padding: 5px 12px;
     background: var(--bg-accent-light);
     color: var(--emerald-primary);
-    font-size: 12px;
+    font-size: 11.5px;
     font-weight: 700;
     border-radius: 20px;
     margin-bottom: 12px;
+    border: 1px solid var(--border-emerald);
   }
   .route-title {
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 700;
     color: var(--text-heading);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    line-height: 1.3;
   }
   .route-stats {
     display: flex;
-    gap: 14px;
-    font-size: 13px;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .route-stat-pill {
+    font-size: 11.5px;
     color: var(--text-muted);
+    background: var(--bg-surface);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  .route-desc {
+    font-size: 13.5px;
+    color: var(--text-main);
+    line-height: 1.55;
     margin-bottom: 16px;
-    padding-bottom: 12px;
-    border-bottom: 1px dashed var(--border-color);
   }
   .route-price-box {
     margin-top: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 10px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-color);
+  }
+  .route-price-box b {
+    font-size: 20px;
+    color: var(--text-heading);
+    font-family: var(--font-heading);
   }
 
-  /* ------- REVIEWS & TESTIMONIALS ------- */
+  /* ------- CUSTOMER REVIEWS ------- */
+  #reviews { background: #FFFFFF; }
   .review-summary-banner {
     background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
     color: #FFFFFF;
@@ -696,7 +579,7 @@
     gap: 16px;
   }
   .score-num {
-    font-size: 42px;
+    font-size: 44px;
     font-family: var(--font-heading);
     font-weight: 800;
     color: #F59E0B;
@@ -704,11 +587,11 @@
   }
   .reviews-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
   }
   .review-card {
-    background: var(--bg-card);
+    background: var(--bg-main);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
     padding: 24px;
@@ -716,6 +599,11 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    transition: transform 0.25s ease;
+  }
+  .review-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
   }
   .review-stars {
     color: #F59E0B;
@@ -747,6 +635,8 @@
     align-items: center;
     justify-content: center;
     font-size: 15px;
+    border: 1px solid var(--border-color);
+    flex-shrink: 0;
   }
   .verified-tag {
     display: inline-flex;
@@ -758,23 +648,25 @@
   }
 
   /* ------- FAQ ACCORDION ------- */
+  #faq { background: var(--bg-surface); }
   .faq-container {
-    max-width: 860px;
+    max-width: 840px;
     margin: 36px auto 0;
     display: flex;
     flex-direction: column;
     gap: 14px;
   }
   .faq-item {
-    background: var(--bg-card);
+    background: #FFFFFF;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
     overflow: hidden;
     transition: all 0.25s ease;
+    box-shadow: var(--shadow-sm);
   }
   .faq-item.active {
     border-color: var(--emerald-primary);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 16px var(--emerald-glow);
   }
   .faq-header {
     padding: 18px 22px;
@@ -789,9 +681,7 @@
     gap: 14px;
     user-select: none;
   }
-  .faq-header:hover {
-    color: var(--emerald-primary);
-  }
+  .faq-header:hover { color: var(--emerald-primary); }
   .faq-icon {
     width: 26px;
     height: 26px;
@@ -800,8 +690,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
-    transition: transform 0.3s ease;
+    font-size: 12px;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
     flex-shrink: 0;
   }
   .faq-item.active .faq-icon {
@@ -823,18 +713,19 @@
     padding: 0 22px 18px;
   }
 
-  /* ------- MAP & SOCIAL ------- */
+  /* ------- MAP & SOCIAL WIDGET ------- */
   .map-frame {
     width: 100%;
-    height: 220px;
-    border: 0;
+    height: 180px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
+    margin-top: 10px;
   }
   .social-row {
     display: flex;
     gap: 10px;
-    margin-top: 12px;
+    margin-top: 14px;
   }
   .social-btn {
     width: 36px;
@@ -846,11 +737,96 @@
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
   }
   .social-btn:hover {
     background: var(--emerald-primary);
+    border-color: var(--emerald-primary);
     transform: translateY(-2px);
   }
+
+  /* ------- MEDIA QUERIES ------- */
+  @media (max-width: 1100px) {
+    .hero-search-bar { grid-template-columns: 1fr 1fr; }
+    .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    .fleet-grid { grid-template-columns: repeat(2, 1fr); }
+    .routes-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .reviews-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .pack-grid { grid-template-columns: 1fr; }
+    .estimator-grid { grid-template-columns: 1fr; }
+    .safari-grid { grid-template-columns: 1fr; }
+    .foot-grid { grid-template-columns: 1fr 1fr; gap: 36px 24px; }
+    .phone-header-btn span { display: none; }
+  }
+
+  @media (max-width: 768px) {
+    .wrap { padding: 0 16px; }
+    img { max-width: 100%; }
+
+    /* NAVBAR */
+    .nav-menu { display: none; }
+    .hamburger {
+      display: flex; flex-direction: column; justify-content: center;
+      gap: 5px; width: 40px; height: 40px; cursor: pointer; z-index: 300;
+      background: none; border: none; padding: 6px; flex-shrink: 0;
+    }
+    .hamburger span {
+      display: block; height: 2.5px; border-radius: 2px;
+      background: var(--text-heading); transition: all 0.3s ease;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+    .nav-bar { padding: 10px 14px; }
+    .brand-text { font-size: 17px; }
+    .brand-text small { font-size: 8.5px; }
+    .nav-bar > div > .btn { display: none; }
+
+    /* HERO */
+    .hero-section { min-height: 100svh; padding: 100px 0 60px; overflow: hidden; }
+    .hero-container { padding: 0 16px; width: 100%; max-width: 100%; }
+    .hero-badge-pill { font-size: 11px; padding: 6px 14px; text-align: center; max-width: 100%; }
+    .hero-title-main { font-size: clamp(28px, 7.5vw, 42px); word-break: break-word; }
+    .hero-sub-text { font-size: 14px; padding: 0; word-break: break-word; }
+    .hero-search-bar {
+      grid-template-columns: 1fr;
+      gap: 10px; padding: 14px;
+      width: 100%; max-width: 100%;
+      border-radius: 16px;
+      margin-top: 24px;
+    }
+    .hero-cta-row { flex-direction: column; gap: 10px; width: 100%; }
+    .hero-cta-row .btn { width: 100%; justify-content: center; }
+
+    /* SECTIONS */
+    .section-pad { padding: 48px 0; }
+    .section-head { margin-bottom: 26px; padding: 0 4px; }
+    .section-head h2 { font-size: clamp(22px, 6vw, 30px); }
+    .section-head p { font-size: 13.5px; }
+
+    /* GRIDS */
+    .routes-grid { grid-template-columns: 1fr; gap: 16px; }
+    .reviews-grid { grid-template-columns: 1fr; gap: 16px; }
+    .review-summary-banner { padding: 22px 20px; flex-direction: column; align-items: flex-start; gap: 16px; }
+    .foot-grid { grid-template-columns: 1fr; gap: 28px; }
+    .foot-bottom { flex-direction: column; gap: 8px; text-align: center; font-size: 12px; }
+  }
+
+  @media (max-width: 400px) {
+    .nav-bar { padding: 8px 12px; }
+    .brand-icon { width: 36px; height: 36px; font-size: 18px; }
+    .trust-grid { grid-template-columns: 1fr; gap: 10px; }
+    .safari-gallery-stack { grid-template-columns: 1fr; }
+    .hero-title-main { font-size: clamp(24px, 8vw, 36px); }
+    .estimator-card { padding: 16px 10px; }
+  }
+
+  /* Hide hamburger on desktop */
+  @media (min-width: 769px) {
+    .hamburger { display: none !important; }
+    .nav-bar > div > .btn { display: inline-flex !important; }
+  }
+</style>
 
   /* Hide hamburger on desktop */
   @media (min-width: 769px) {
@@ -1268,10 +1244,10 @@
   </section>
 
   <!-- POPULAR OUTSTATION ROUTES SECTION -->
-  <section class="section-pad" id="routes" style="background:#FFF">
+  <section class="section-pad" id="routes">
     <div class="wrap">
       <div class="section-head">
-        <div class="hero-badge-pill" style="color:var(--emerald-primary);background:var(--bg-surface)">Popular Destinations</div>
+        <div class="hero-badge-pill" style="color:var(--emerald-primary);background:var(--bg-accent-light);border:1px solid var(--border-emerald)">Popular Destinations</div>
         <h2>Top Outstation &amp; Pilgrimage Routes</h2>
         <p>Curated one-way and round-trip routes across Madhya Pradesh with guaranteed clean cars &amp; expert highway drivers.</p>
       </div>
@@ -1282,14 +1258,14 @@
           <div class="route-badge">🛕 Mahakal Corridor Special</div>
           <h3 class="route-title">Indore ⇄ Ujjain (Mahakaleshwar)</h3>
           <div class="route-stats">
-            <span>📍 55 km</span>
-            <span>⏱️ 1.5 Hours</span>
-            <span>🛣️ Four-Lane Highway</span>
+            <span class="route-stat-pill">📍 55 km</span>
+            <span class="route-stat-pill">⏱️ 1.5 Hours</span>
+            <span class="route-stat-pill">🛣️ Express Highway</span>
           </div>
-          <p style="font-size:14px;color:var(--text-muted);margin-bottom:16px">Ideal for same-day Bhasma Aarti darshan, Mahakal Lok corridor tours, and Harsiddhi Temple visits.</p>
+          <p class="route-desc">Ideal for same-day Bhasma Aarti darshan, Mahakal Lok corridor tours, and Harsiddhi Temple visits.</p>
           <div class="route-price-box">
             <div>
-              <span style="font-size:12px;color:var(--text-muted);display:block">Return Fare Starts</span>
+              <span style="font-size:11px;color:var(--text-muted);display:block;text-transform:uppercase;letter-spacing:0.05em">Return Fare</span>
               <b>₹1,800 <small style="font-size:12px;font-weight:400;color:var(--text-muted)">onwards</small></b>
             </div>
             <button class="btn btn-emerald btn-sm" onclick="bookRoute('Indore to Ujjain Mahakal Corridor')">Book Route</button>
@@ -1301,14 +1277,14 @@
           <div class="route-badge">🌊 Jyotirlinga Yatra</div>
           <h3 class="route-title">Indore ⇄ Omkareshwar</h3>
           <div class="route-stats">
-            <span>📍 80 km</span>
-            <span>⏱️ 2.5 Hours</span>
-            <span>⛰️ Scenic Narmada Drive</span>
+            <span class="route-stat-pill">📍 80 km</span>
+            <span class="route-stat-pill">⏱️ 2.5 Hours</span>
+            <span class="route-stat-pill">⛰️ Narmada Ghat Drive</span>
           </div>
-          <p style="font-size:14px;color:var(--text-muted);margin-bottom:16px">Comfortable AC cab trip to Shri Omkareshwar Jyotirlinga, Mamleshwar, and Narmada ghat boat trips.</p>
+          <p class="route-desc">Comfortable AC cab trip to Shri Omkareshwar Jyotirlinga, Mamleshwar, and Narmada river boat points.</p>
           <div class="route-price-box">
             <div>
-              <span style="font-size:12px;color:var(--text-muted);display:block">Return Fare Starts</span>
+              <span style="font-size:11px;color:var(--text-muted);display:block;text-transform:uppercase;letter-spacing:0.05em">Return Fare</span>
               <b>₹2,400 <small style="font-size:12px;font-weight:400;color:var(--text-muted)">onwards</small></b>
             </div>
             <button class="btn btn-emerald btn-sm" onclick="bookRoute('Indore to Omkareshwar Jyotirlinga')">Book Route</button>
@@ -1320,14 +1296,14 @@
           <div class="route-badge">🏰 Heritage &amp; Business</div>
           <h3 class="route-title">Indore ⇄ Bhopal / Mandu</h3>
           <div class="route-stats">
-            <span>📍 195 km</span>
-            <span>⏱️ 3.5 Hours</span>
-            <span>💼 Corporate &amp; Sightseeing</span>
+            <span class="route-stat-pill">📍 195 km</span>
+            <span class="route-stat-pill">⏱️ 3.5 Hours</span>
+            <span class="route-stat-pill">💼 Executive Drive</span>
           </div>
-          <p style="font-size:14px;color:var(--text-muted);margin-bottom:16px">Premium executive sedan &amp; MPV cabs for state capital business meetings, Sanchi Stupa, or Mandu fort tours.</p>
+          <p class="route-desc">Premium sedans &amp; MPVs for state capital business trips, Sanchi Stupa, or Mandu fort tours.</p>
           <div class="route-price-box">
             <div>
-              <span style="font-size:12px;color:var(--text-muted);display:block">Outstation Rate</span>
+              <span style="font-size:11px;color:var(--text-muted);display:block;text-transform:uppercase;letter-spacing:0.05em">Outstation Rate</span>
               <b>₹3,500 <small style="font-size:12px;font-weight:400;color:var(--text-muted)">onwards</small></b>
             </div>
             <button class="btn btn-emerald btn-sm" onclick="bookRoute('Indore to Bhopal / Mandu')">Book Route</button>
@@ -1337,16 +1313,16 @@
         <!-- ROUTE 4: JABALPUR TO BANDHAVGARH -->
         <div class="route-card">
           <div class="route-badge">🐅 Wildlife Trail Express</div>
-          <h3 class="route-title">Jabalpur / Katni ⇄ Bandhavgarh</h3>
+          <h3 class="route-title">Jabalpur ⇄ Bandhavgarh</h3>
           <div class="route-stats">
-            <span>📍 165 km</span>
-            <span>⏱️ 3.5 Hours</span>
-            <span>🌲 Tiger Reserve Gate Pickup</span>
+            <span class="route-stat-pill">📍 165 km</span>
+            <span class="route-stat-pill">⏱️ 3.5 Hours</span>
+            <span class="route-stat-pill">🌲 Safari Gate Transfer</span>
           </div>
-          <p style="font-size:14px;color:var(--text-muted);margin-bottom:16px">Airport/Station pickup to Tala, Magadhi, Khitauli core gates with baggage handling &amp; safari permit assistance.</p>
+          <p class="route-desc">Airport/Station pickup to Tala, Magadhi &amp; Khitauli core gates with luggage assistance.</p>
           <div class="route-price-box">
             <div>
-              <span style="font-size:12px;color:var(--text-muted);display:block">One-Way Transfer</span>
+              <span style="font-size:11px;color:var(--text-muted);display:block;text-transform:uppercase;letter-spacing:0.05em">Transfer Rate</span>
               <b>₹3,800 <small style="font-size:12px;font-weight:400;color:var(--text-muted)">onwards</small></b>
             </div>
             <button class="btn btn-emerald btn-sm" onclick="bookRoute('Jabalpur to Bandhavgarh Safari Transfer')">Book Route</button>
